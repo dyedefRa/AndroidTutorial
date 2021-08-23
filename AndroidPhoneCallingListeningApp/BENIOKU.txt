@@ -1,0 +1,2 @@
+Bu projede arama durumlarýný kontrol ediyoruz.
+Gelen numarayý takip edemýyoruz.
