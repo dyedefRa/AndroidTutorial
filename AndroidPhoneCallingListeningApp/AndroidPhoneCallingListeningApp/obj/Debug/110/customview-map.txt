@@ -10,6 +10,8 @@ external-path;D:\ANDROIDAPPS\AndroidPhoneCallingListeningApp\AndroidPhoneCalling
 foreground;obj\Debug\110\res\mipmap-anydpi-v26\ic_launcher.xml
 foreground;obj\Debug\110\res\mipmap-anydpi-v26\ic_launcher_round.xml
 item;obj\Debug\110\res\values\styles.xml
+LinearLayout;obj\Debug\110\res\atutorials\callendstartcatch\layout1.xml
+LinearLayout;obj\Debug\110\res\layout\callendstartcatch.xml
 LinearLayout;obj\Debug\110\res\layout\layout1.xml
 paths;D:\ANDROIDAPPS\AndroidPhoneCallingListeningApp\AndroidPhoneCallingListeningApp\obj\Debug\110\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 RelativeLayout;obj\Debug\110\res\layout\activity_main.xml

@@ -12,7 +12,7 @@ using System.Text;
 
 namespace AndroidPhoneCallingListeningApp.Extend
 {
-    [Activity(Label = "MonitoringThePhone", MainLauncher = true)]
+    [Activity(Label = "MonitoringThePhone")]
     public class Activity1 : Activity
     {
         TextView txtOutput;

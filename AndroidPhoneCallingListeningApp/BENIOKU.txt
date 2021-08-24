@@ -1,2 +1,8 @@
+MainActivity ve Extend>Acticity1 için geçerli
 Bu projede arama durumlarýný kontrol ediyoruz.
 Gelen numarayý takip edemýyoruz.
+
+
+------------------------
+CallEndStartCatch ile aranýlýyorken ve kapalýyken vs yakalanýyor fakat o sýnýfý activitye entegre edemedim kaldý öyle
+----------------------------

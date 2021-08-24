@@ -61,6 +61,8 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ATutorials\CallEndStartCatch\Activity1.cs" />
+    <Compile Include="ATutorials\CallEndStartCatch\MyCallReceiver.cs" />
     <Compile Include="Extend\Activity1.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -107,6 +109,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\layout1.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\CallEndStartCatch.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
