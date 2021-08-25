@@ -1,0 +1,7 @@
+------------------------------------------------------------------------
+
+creating_listview içinde 
+list_view rowu kullandýk . Sanki bir Template olusturmuþuz gibi.
+MyListViewAdapter ý kullanarak oluþturduk.
+------------------------------------------------------------------------
+
