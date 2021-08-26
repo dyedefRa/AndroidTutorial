@@ -11,7 +11,8 @@
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme" android:name="android.app.Application" android:debuggable="true" android:extractNativeLibs="true">
     <activity android:label="@string/app_name" android:theme="@style/AppTheme" android:name="crc6477d61aad623a79e5.MainActivity" />
-    <activity android:label="creating_listview" android:name="crc641c66b83cab41b576.creating_listview">
+    <activity android:label="creating_listview" android:name="crc641c66b83cab41b576.creating_listview" />
+    <activity android:label="login1" android:name="crc641c66b83cab41b576.login1">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

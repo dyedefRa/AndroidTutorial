@@ -8,4 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+	<!--<string name="dialog_animation">
+		<item name="android:windowEnterAnimation">@animate/slide_up</item>
+		<item name="android:windowExitAnimation">@animate/slide_right</item>
+	</string>-->
 </resources>
+

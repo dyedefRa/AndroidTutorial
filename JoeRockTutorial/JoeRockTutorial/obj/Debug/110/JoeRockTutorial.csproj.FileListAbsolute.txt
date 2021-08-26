@@ -16,9 +16,6 @@ D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\lp\71\jl\files.cach
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\lp\72\jl\files.cache
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\lp\73\jl\files.cache
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\lp\74\jl\files.cache
-D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\R.txt
-D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\R.cs.flag
-D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\JoeRockTutorial.csproj.CoreCompileInputs.cache
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\bin\Debug\JoeRockTutorial.dll
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\bin\Debug\JoeRockTutorial.pdb
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\bin\Debug\com.companyname.joerocktutorial.apk
@@ -26,6 +23,9 @@ D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\bin\Debug\com.companyname.joerock
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\bin\Debug\com.companyname.joerocktutorial-Signed.aab
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\bin\Debug\com.companyname.joerocktutorial-Signed.apk
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\bin\Debug\com.companyname.joerocktutorial-Signed.apk.idsig
+D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\R.txt
+D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\R.cs.flag
+D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\JoeRockTutorial.csproj.CoreCompileInputs.cache
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\JoeRockTutorial.dll
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\JoeRockTutorial.pdb
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\bin\com.companyname.joerocktutorial.apk
@@ -54,7 +54,14 @@ D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\res\mipmap-xxhdpi\i
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\res\mipmap-xxxhdpi\ic_launcher.png
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\res\mipmap-xxxhdpi\ic_launcher_foreground.png
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\res\mipmap-xxxhdpi\ic_launcher_round.png
+D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\res\drawable\buttonsignupstyle.xml
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\res\layout\creating_listview.xml
+D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\res\layout\listview_row.xml
+D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\res\layout\login_1.xml
+D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\res\drawable\buttonsigninstyle.xml
+D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\res\drawable\progressbarstyle.xml
+D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\res\drawable\mail.jpg
+D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\res\layout\dialog_sign_up.xml
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\uploadflags.txt
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\resolvedassemblies.hash
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\assets\Java.Interop.dll
@@ -201,6 +208,7 @@ D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\src\android
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\src\com\google\android\material\R.java
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\src\com\google\android\material\snackbar\Snackbar_SnackbarActionClickImplementor.java
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\src\crc641c66b83cab41b576\creating_listview.java
+D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\src\crc641c66b83cab41b576\login1.java
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\src\crc64396a3fe5f8138e3f\CustomTabsServiceConnectionImpl.java
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\src\crc64396a3fe5f8138e3f\KeepAliveService.java
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\src\crc6477d61aad623a79e5\MainActivity.java
@@ -221,6 +229,8 @@ D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\src\crc64a0
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\src\crc64a0e0a82d0db9a07d\TextToSpeechImplementation.java
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\src\crc64a0e0a82d0db9a07d\WebAuthenticatorCallbackActivity.java
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\src\crc64a0e0a82d0db9a07d\WebAuthenticatorIntermediateActivity.java
+D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\src\crc64bd8fabe48f776c73\dialog_SignIn.java
+D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\src\crc64bd8fabe48f776c73\MyListViewAdapter.java
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\src\mono\androidx\appcompat\app\ActionBar_OnMenuVisibilityListenerImplementor.java
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\src\mono\androidx\appcompat\app\ActionBar_OnNavigationListenerImplementor.java
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java
@@ -304,6 +314,3 @@ D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\stamp\_ConvertResou
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
-D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\JoeRockTutorial.csproj.AssemblyReference.cache
-D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\res\layout\listview_row.xml
-D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\android\src\crc64bd8fabe48f776c73\MyListViewAdapter.java

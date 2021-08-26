@@ -4,4 +4,7 @@ creating_listview içinde
 list_view rowu kullandýk . Sanki bir Template olusturmuþuz gibi.
 MyListViewAdapter ý kullanarak oluþturduk.
 ------------------------------------------------------------------------
-
+ Login SCREEN
+ drawabledaki buttonsigninstyle , buttonsignupstyle ve progresbarstyle login1.xml için stylear. background attributelerine attýk.
+ activity= login1.cs
+ dialog i.in dialog_sign

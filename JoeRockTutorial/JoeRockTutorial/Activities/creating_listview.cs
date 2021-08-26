@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace JoeRockTutorial.Activities
 {
-    [Activity(Label = "creating_listview", MainLauncher = true)]
+    [Activity(Label = "creating_listview")]
     public class creating_listview : Activity
     {
         private List<Models.Person> items;
