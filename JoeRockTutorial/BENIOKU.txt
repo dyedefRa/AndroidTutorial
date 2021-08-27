@@ -7,4 +7,10 @@ MyListViewAdapter ý kullanarak oluþturduk.
  Login SCREEN
  drawabledaki buttonsigninstyle , buttonsignupstyle ve progresbarstyle login1.xml için stylear. background attributelerine attýk.
  activity= login1.cs
- dialog i.in dialog_sign
+dialog_Signýn clasý olusturup bunu DialogFragment tan mýras aldýk ve bu dialog_sign_up.xml view ini buranýn viewi olarak ayarladýk.
+Bu dialogu login1.cs te button sign in týklandýgýnda actýrdýk.
+
+  FragmentTransaction transaction = FragmentManager.BeginTransaction();
+                dialog_SignIn signUpDialog = new dialog_SignIn();
+                signUpDialog.Show(transaction,"dialog_fragment");
+            };

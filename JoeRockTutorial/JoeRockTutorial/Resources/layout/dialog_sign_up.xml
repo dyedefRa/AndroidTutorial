@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:text="Sing Up!"
 		android:id="@+id/btnDialogEmail"
-        android:textSize="10dp"
+        android:textSize="20dp"
         android:textColor="#fff"
         android:textStyle="bold"
         android:paddingLeft="5dp"

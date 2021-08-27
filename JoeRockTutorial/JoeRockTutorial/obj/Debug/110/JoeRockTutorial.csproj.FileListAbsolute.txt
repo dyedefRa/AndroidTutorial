@@ -314,3 +314,4 @@ D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\stamp\_ConvertResou
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
+D:\ANDROIDAPPS\JoeRockTutorial\JoeRockTutorial\obj\Debug\110\JoeRockTutorial.csproj.AssemblyReference.cache
