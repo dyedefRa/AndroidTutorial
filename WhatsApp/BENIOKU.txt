@@ -1,0 +1,36 @@
+----------------------------------------------
+ app_bar_layout.xml adýnda ToolBar oluþturduk  (androidx.appcompat.widget.Toolbar) => 
+  ve bu xml uzantýlý toolbarý  activity_main sayfasýnýn include ile tanýttýk ;
+
+      <include
+        android:id="@+id/main_page_toolbar"
+        layout="@layout/app_bar_layout"
+     />
+ -----HATA-----
+ default actionbar hatasý !
+     style a  bunlarý ekle -->
+
+     I think you're developing for Android Lollipop, but anyway include this line:
+<item name="windowActionBar">false</item> 
+     
+     	<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>   
+Default toobardý iptal ettik.
+
+Herhangi bi activity iþlemi yapýlmadý.
+----------------------------------------------Tab yapýmý (Chat Groups Contacts) tablarýnýn yapýmý.
+
+
+activity_main e Tablayout ve viewpager ekledik
+
+Yeni Fragments ekledik. onlar için  fragment chat/gruop/contacts ekledik. ve bunlarýn layoutlarýný ekledýk
+
+ve bunlarý yönetebilecegimiz Bir TabsAccessorAdapter sýnýfý Model klasorune ekledýk. ve fragmentlarýmýzý bu sýnýfa tanýttýk
+ve MainActicity de de ;
+viewpager adapterina adapterimizi verdik
+  mViewPager.Adapter = mTabsAccessorAdapter;
+Tablayouta view pageyi verdik
+   mTabLayout.SetupWithViewPager(mViewPager); ekledik.
+
+
+
