@@ -46,6 +46,14 @@
               "target": "Package",
               "version": "[1.7.0, )"
             },
+            "Xamarin.Firebase.Auth": {
+              "target": "Package",
+              "version": "[121.0.1.1, )"
+            },
+            "Xamarin.Firebase.Core": {
+              "target": "Package",
+              "version": "[119.0.0, )"
+            },
             "Xamarin.Google.Android.Material": {
               "target": "Package",
               "version": "[1.4.0.2, )"

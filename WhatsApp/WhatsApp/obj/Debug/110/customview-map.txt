@@ -15,12 +15,8 @@ foreground;obj\Debug\110\res\mipmap-anydpi-v26\ic_launcher.xml
 foreground;obj\Debug\110\res\mipmap-anydpi-v26\ic_launcher_round.xml
 include;obj\Debug\110\res\layout\activity_main.xml
 item;obj\Debug\110\res\values\styles.xml
-LinearLayout;obj\Debug\110\res\fragments\fragment_contact.xml
-LinearLayout;obj\Debug\110\res\layout\contact_fragment.xml
-LinearLayout;obj\Debug\110\res\layout\fragment_chat.xml
-LinearLayout;obj\Debug\110\res\layout\fragment_contact.xml
-LinearLayout;obj\Debug\110\res\layout\fragment_group.xml
-LinearLayout;obj\Debug\110\res\layout\group_fragment.xml
+LinearLayout;obj\Debug\110\res\layout\login_activity.xml
+LinearLayout;obj\Debug\110\res\layout\register_activity.xml
 paths;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\40\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 RelativeLayout;obj\Debug\110\res\layout\activity_main.xml
 RelativeLayout;obj\Debug\110\res\layout\fragment_chat.xml
@@ -30,7 +26,12 @@ resources;obj\Debug\110\res\values\colors.xml
 resources;obj\Debug\110\res\values\ic_launcher_background.xml
 resources;obj\Debug\110\res\values\strings.xml
 resources;obj\Debug\110\res\values\styles.xml
+shape;obj\Debug\110\res\drawable\buttons.xml
+shape;obj\Debug\110\res\drawable\inputs.xml
+solid;obj\Debug\110\res\drawable\buttons.xml
+solid;obj\Debug\110\res\drawable\inputs.xml
 string;obj\Debug\110\res\values\strings.xml
+stroke;obj\Debug\110\res\drawable\inputs.xml
 style;obj\Debug\110\res\values\styles.xml
 TextView;obj\Debug\110\res\layout\fragment_chat.xml
 TextView;obj\Debug\110\res\layout\fragment_contact.xml

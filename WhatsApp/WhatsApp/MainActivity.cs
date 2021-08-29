@@ -1,11 +1,15 @@
 ﻿using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using AndroidX.AppCompat.App;
 using AndroidX.AppCompat.Widget;
 using AndroidX.ViewPager.Widget;
+using Firebase.Auth;
 using Google.Android.Material.Tabs;
+using System;
 using System.Linq;
+using WhatsApp.Activities;
 using WhatsApp.Models;
 
 namespace WhatsApp
@@ -17,6 +21,8 @@ namespace WhatsApp
         private ViewPager mViewPager;
         private TabLayout mTabLayout;
         private TabsAccessorAdapter mTabsAccessorAdapter;
+
+        private FirebaseUser currentUser;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -45,6 +51,22 @@ namespace WhatsApp
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        protected override void OnStart()
+        {
+            base.OnStart();
+            if (currentUser == null)
+            {
+                SendUserToLoginActivity();
+            }
+        }
+
+        private void SendUserToLoginActivity()
+        {
+            Intent loginIntent = new Intent(this, typeof(LoginActivity));
+            StartActivity(loginIntent);
+
         }
     }
 }
