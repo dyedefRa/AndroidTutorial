@@ -50,9 +50,9 @@
               "target": "Package",
               "version": "[121.0.1.1, )"
             },
-            "Xamarin.Firebase.Core": {
+            "Xamarin.Firebase.Database": {
               "target": "Package",
-              "version": "[119.0.0, )"
+              "version": "[119.7.0, )"
             },
             "Xamarin.Google.Android.Material": {
               "target": "Package",

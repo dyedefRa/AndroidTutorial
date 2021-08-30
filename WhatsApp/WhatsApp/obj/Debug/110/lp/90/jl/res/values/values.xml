@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <item name="ghost_view" type="id"/>
-    <item name="ghost_view_holder" type="id"/>
-    <item name="parent_matrix" type="id"/>
-    <item name="save_non_transition_alpha" type="id"/>
-    <item name="save_overlay_view" type="id"/>
-    <item name="transition_current_scene" type="id"/>
-    <item name="transition_layout_save" type="id"/>
-    <item name="transition_position" type="id"/>
-    <item name="transition_scene_layoutid_cache" type="id"/>
-    <item name="transition_transform" type="id"/>
+<?xml version="1.0" encoding='utf-8' standalone='no'?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<!-- blaze-out/k8-opt/genfiles/java/com/google/android/gmscore/integ/fast/res/values/gmscore_version.xml -->
+<eat-comment/>
+<integer name="google_play_services_version">12451000</integer>
+<!-- java/com/google/android/gmscore/integ/client/common/res/values/strings.xml -->
+<eat-comment/>
+<string name="common_google_play_services_unknown_issue"><xliff:g id="app_name">%1$s</xliff:g> is having trouble with Google Play services. Please try again.</string>
 </resources>

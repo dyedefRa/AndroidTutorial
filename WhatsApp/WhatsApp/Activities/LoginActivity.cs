@@ -16,12 +16,31 @@ namespace WhatsApp.Activities
     public class LoginActivity : Activity
     {
         private FirebaseUser currentUser;
+        private Button btnLogin, btnPhoneLogin;
+        private EditText txtUserEmail, txtUserPassword;
+        private TextView txtNeedNewAccountLink, txtForgetPasswordLink;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.login_activity);
             // Create your application here
+            InitializeFields();
+            txtNeedNewAccountLink.Click += (s, e) =>
+            {
+                Intent registerIntent = new Intent(this, typeof(RegisterActivity));
+                StartActivity(registerIntent);
+            };
+        }
+
+        private void InitializeFields()
+        {
+            btnLogin = FindViewById<Button>(Resource.Id.login_button);
+            btnPhoneLogin = FindViewById<Button>(Resource.Id.phone_login_button);
+            txtUserEmail = FindViewById<EditText>(Resource.Id.login_email);
+            txtUserPassword = FindViewById<EditText>(Resource.Id.login_password);
+            txtNeedNewAccountLink = FindViewById<TextView>(Resource.Id.need_new_account_link);
+            txtForgetPasswordLink = FindViewById<TextView>(Resource.Id.forget_password_link);
         }
 
         protected override void OnStart()

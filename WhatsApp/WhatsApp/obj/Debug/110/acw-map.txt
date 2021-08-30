@@ -4,6 +4,9 @@ whatsapp.MainActivity;crc642fbe8a92180bd497.MainActivity
 WhatsApp.Models.TabsAccessorAdapter, WhatsApp;crc64ffd240300446325f.TabsAccessorAdapter
 WhatsApp.Models.TabsAccessorAdapter;crc64ffd240300446325f.TabsAccessorAdapter
 whatsapp.models.TabsAccessorAdapter;crc64ffd240300446325f.TabsAccessorAdapter
+WhatsApp.Helper.TaskCompletionListener, WhatsApp;crc646d4d0d07ce40ce84.TaskCompletionListener
+WhatsApp.Helper.TaskCompletionListener;crc646d4d0d07ce40ce84.TaskCompletionListener
+whatsapp.helper.TaskCompletionListener;crc646d4d0d07ce40ce84.TaskCompletionListener
 WhatsApp.Fragments.ChatFragment, WhatsApp;crc640830f20ad950fa2c.ChatFragment
 WhatsApp.Fragments.ChatFragment;crc640830f20ad950fa2c.ChatFragment
 whatsapp.fragments.ChatFragment;crc640830f20ad950fa2c.ChatFragment
@@ -16,6 +19,9 @@ whatsapp.fragments.GroupFragment;crc640830f20ad950fa2c.GroupFragment
 WhatsApp.Activities.LoginActivity, WhatsApp;crc64ee1668752c35d02a.LoginActivity
 WhatsApp.Activities.LoginActivity;crc64ee1668752c35d02a.LoginActivity
 whatsapp.activities.LoginActivity;crc64ee1668752c35d02a.LoginActivity
+WhatsApp.Activities.RegisterActivity, WhatsApp;crc64ee1668752c35d02a.RegisterActivity
+WhatsApp.Activities.RegisterActivity;crc64ee1668752c35d02a.RegisterActivity
+whatsapp.activities.RegisterActivity;crc64ee1668752c35d02a.RegisterActivity
 AndroidX.Activity.IOnBackPressedDispatcherOwner, Xamarin.AndroidX.Activity;androidx.activity.OnBackPressedDispatcherOwner
 AndroidX.Activity.IOnBackPressedDispatcherOwner;androidx.activity.OnBackPressedDispatcherOwner
 androidx.activity.OnBackPressedDispatcherOwner;androidx.activity.OnBackPressedDispatcherOwner
@@ -1279,33 +1285,165 @@ com.google.firebase.components.ComponentFactory;com.google.firebase.components.C
 Firebase.Components.IComponentRegistrar, Xamarin.Firebase.Components;com.google.firebase.components.ComponentRegistrar
 Firebase.Components.IComponentRegistrar;com.google.firebase.components.ComponentRegistrar
 com.google.firebase.components.ComponentRegistrar;com.google.firebase.components.ComponentRegistrar
-Firebase.Installations.Time.IClock, Xamarin.Firebase.Installations;com.google.firebase.installations.time.Clock
-Firebase.Installations.Time.IClock;com.google.firebase.installations.time.Clock
-com.google.firebase.installations.time.Clock;com.google.firebase.installations.time.Clock
-Firebase.Installations.IFirebaseInstallationsApi, Xamarin.Firebase.Installations.InterOp;com.google.firebase.installations.FirebaseInstallationsApi
-Firebase.Installations.IFirebaseInstallationsApi;com.google.firebase.installations.FirebaseInstallationsApi
-com.google.firebase.installations.FirebaseInstallationsApi;com.google.firebase.installations.FirebaseInstallationsApi
-Firebase.Installations.Internal.IFidListener, Xamarin.Firebase.Installations.InterOp;com.google.firebase.installations.internal.FidListener
-Firebase.Installations.Internal.IFidListener;com.google.firebase.installations.internal.FidListener
-com.google.firebase.installations.internal.FidListener;com.google.firebase.installations.internal.FidListener
-Firebase.Installations.Internal.IFidListenerImplementor, Xamarin.Firebase.Installations.InterOp;mono.com.google.firebase.installations.internal.FidListenerImplementor
-Firebase.Installations.Internal.IFidListenerImplementor;mono.com.google.firebase.installations.internal.FidListenerImplementor
-mono.com.google.firebase.installations.internal.FidListenerImplementor;mono.com.google.firebase.installations.internal.FidListenerImplementor
-Firebase.Installations.Internal.IFidListenerHandle, Xamarin.Firebase.Installations.InterOp;com.google.firebase.installations.internal.FidListenerHandle
-Firebase.Installations.Internal.IFidListenerHandle;com.google.firebase.installations.internal.FidListenerHandle
-com.google.firebase.installations.internal.FidListenerHandle;com.google.firebase.installations.internal.FidListenerHandle
-Firebase.Analytics.Connector.IAnalyticsConnectorAnalyticsConnectorHandle, Xamarin.Firebase.Measurement.Connector;com.google.firebase.analytics.connector.AnalyticsConnector$AnalyticsConnectorHandle
-Firebase.Analytics.Connector.IAnalyticsConnectorAnalyticsConnectorHandle;com.google.firebase.analytics.connector.AnalyticsConnector$AnalyticsConnectorHandle
-com.google.firebase.analytics.connector.AnalyticsConnector$AnalyticsConnectorHandle;com.google.firebase.analytics.connector.AnalyticsConnector$AnalyticsConnectorHandle
-Firebase.Analytics.Connector.IAnalyticsConnectorAnalyticsConnectorListener, Xamarin.Firebase.Measurement.Connector;com.google.firebase.analytics.connector.AnalyticsConnector$AnalyticsConnectorListener
-Firebase.Analytics.Connector.IAnalyticsConnectorAnalyticsConnectorListener;com.google.firebase.analytics.connector.AnalyticsConnector$AnalyticsConnectorListener
-com.google.firebase.analytics.connector.AnalyticsConnector$AnalyticsConnectorListener;com.google.firebase.analytics.connector.AnalyticsConnector$AnalyticsConnectorListener
-Firebase.Analytics.Connector.IAnalyticsConnectorAnalyticsConnectorListenerImplementor, Xamarin.Firebase.Measurement.Connector;mono.com.google.firebase.analytics.connector.AnalyticsConnector_AnalyticsConnectorListenerImplementor
-Firebase.Analytics.Connector.IAnalyticsConnectorAnalyticsConnectorListenerImplementor;mono.com.google.firebase.analytics.connector.AnalyticsConnector_AnalyticsConnectorListenerImplementor
-mono.com.google.firebase.analytics.connector.AnalyticsConnector_AnalyticsConnectorListenerImplementor;mono.com.google.firebase.analytics.connector.AnalyticsConnector_AnalyticsConnectorListenerImplementor
-Firebase.Analytics.Connector.IAnalyticsConnector, Xamarin.Firebase.Measurement.Connector;com.google.firebase.analytics.connector.AnalyticsConnector
-Firebase.Analytics.Connector.IAnalyticsConnector;com.google.firebase.analytics.connector.AnalyticsConnector
-com.google.firebase.analytics.connector.AnalyticsConnector;com.google.firebase.analytics.connector.AnalyticsConnector
+Firebase.Database.Collection.ILLRBNodeShortCircuitingNodeVisitor, Xamarin.Firebase.Database.Collection;com.google.firebase.database.collection.LLRBNode$ShortCircuitingNodeVisitor
+Firebase.Database.Collection.ILLRBNodeShortCircuitingNodeVisitor;com.google.firebase.database.collection.LLRBNode$ShortCircuitingNodeVisitor
+com.google.firebase.database.collection.LLRBNode$ShortCircuitingNodeVisitor;com.google.firebase.database.collection.LLRBNode$ShortCircuitingNodeVisitor
+Firebase.Database.Collection.ILLRBNode, Xamarin.Firebase.Database.Collection;com.google.firebase.database.collection.LLRBNode
+Firebase.Database.Collection.ILLRBNode;com.google.firebase.database.collection.LLRBNode
+com.google.firebase.database.collection.LLRBNode;com.google.firebase.database.collection.LLRBNode
+Firebase.Database.Collection.ImmutableSortedMap+Builder+IKeyTranslator, Xamarin.Firebase.Database.Collection;com.google.firebase.database.collection.ImmutableSortedMap$Builder$KeyTranslator
+Firebase.Database.Collection.ImmutableSortedMap.Builder.IKeyTranslator;com.google.firebase.database.collection.ImmutableSortedMap$Builder$KeyTranslator
+com.google.firebase.database.collection.ImmutableSortedMap$Builder$KeyTranslator;com.google.firebase.database.collection.ImmutableSortedMap$Builder$KeyTranslator
+Firebase.Database.DatabaseReference+ICompletionListener, Xamarin.Firebase.Database;com.google.firebase.database.DatabaseReference$CompletionListener
+Firebase.Database.DatabaseReference.ICompletionListener;com.google.firebase.database.DatabaseReference$CompletionListener
+com.google.firebase.database.DatabaseReference$CompletionListener;com.google.firebase.database.DatabaseReference$CompletionListener
+Firebase.Database.DatabaseReference+ICompletionListenerImplementor, Xamarin.Firebase.Database;mono.com.google.firebase.database.DatabaseReference_CompletionListenerImplementor
+Firebase.Database.DatabaseReference.ICompletionListenerImplementor;mono.com.google.firebase.database.DatabaseReference_CompletionListenerImplementor
+mono.com.google.firebase.database.DatabaseReference_CompletionListenerImplementor;mono.com.google.firebase.database.DatabaseReference_CompletionListenerImplementor
+Firebase.Database.IChildEventListener, Xamarin.Firebase.Database;com.google.firebase.database.ChildEventListener
+Firebase.Database.IChildEventListener;com.google.firebase.database.ChildEventListener
+com.google.firebase.database.ChildEventListener;com.google.firebase.database.ChildEventListener
+Firebase.Database.IChildEventListenerImplementor, Xamarin.Firebase.Database;mono.com.google.firebase.database.ChildEventListenerImplementor
+Firebase.Database.IChildEventListenerImplementor;mono.com.google.firebase.database.ChildEventListenerImplementor
+mono.com.google.firebase.database.ChildEventListenerImplementor;mono.com.google.firebase.database.ChildEventListenerImplementor
+Firebase.Database.IExclude, Xamarin.Firebase.Database;com.google.firebase.database.Exclude
+Firebase.Database.IExclude;com.google.firebase.database.Exclude
+com.google.firebase.database.Exclude;com.google.firebase.database.Exclude
+Firebase.Database.IIgnoreExtraProperties, Xamarin.Firebase.Database;com.google.firebase.database.IgnoreExtraProperties
+Firebase.Database.IIgnoreExtraProperties;com.google.firebase.database.IgnoreExtraProperties
+com.google.firebase.database.IgnoreExtraProperties;com.google.firebase.database.IgnoreExtraProperties
+Firebase.Database.ILogger, Xamarin.Firebase.Database;com.google.firebase.database.Logger
+Firebase.Database.ILogger;com.google.firebase.database.Logger
+com.google.firebase.database.Logger;com.google.firebase.database.Logger
+Firebase.Database.IPropertyName, Xamarin.Firebase.Database;com.google.firebase.database.PropertyName
+Firebase.Database.IPropertyName;com.google.firebase.database.PropertyName
+com.google.firebase.database.PropertyName;com.google.firebase.database.PropertyName
+Firebase.Database.IThrowOnExtraProperties, Xamarin.Firebase.Database;com.google.firebase.database.ThrowOnExtraProperties
+Firebase.Database.IThrowOnExtraProperties;com.google.firebase.database.ThrowOnExtraProperties
+com.google.firebase.database.ThrowOnExtraProperties;com.google.firebase.database.ThrowOnExtraProperties
+Firebase.Database.IValueEventListener, Xamarin.Firebase.Database;com.google.firebase.database.ValueEventListener
+Firebase.Database.IValueEventListener;com.google.firebase.database.ValueEventListener
+com.google.firebase.database.ValueEventListener;com.google.firebase.database.ValueEventListener
+Firebase.Database.IValueEventListenerImplementor, Xamarin.Firebase.Database;mono.com.google.firebase.database.ValueEventListenerImplementor
+Firebase.Database.IValueEventListenerImplementor;mono.com.google.firebase.database.ValueEventListenerImplementor
+mono.com.google.firebase.database.ValueEventListenerImplementor;mono.com.google.firebase.database.ValueEventListenerImplementor
+Firebase.Database.Transaction+IHandler, Xamarin.Firebase.Database;com.google.firebase.database.Transaction$Handler
+Firebase.Database.Transaction.IHandler;com.google.firebase.database.Transaction$Handler
+com.google.firebase.database.Transaction$Handler;com.google.firebase.database.Transaction$Handler
+Firebase.Database.Tubesock.IThreadInitializer, Xamarin.Firebase.Database;com.google.firebase.database.tubesock.ThreadInitializer
+Firebase.Database.Tubesock.IThreadInitializer;com.google.firebase.database.tubesock.ThreadInitializer
+com.google.firebase.database.tubesock.ThreadInitializer;com.google.firebase.database.tubesock.ThreadInitializer
+Firebase.Database.Tubesock.IWebSocketEventHandler, Xamarin.Firebase.Database;com.google.firebase.database.tubesock.WebSocketEventHandler
+Firebase.Database.Tubesock.IWebSocketEventHandler;com.google.firebase.database.tubesock.WebSocketEventHandler
+com.google.firebase.database.tubesock.WebSocketEventHandler;com.google.firebase.database.tubesock.WebSocketEventHandler
+Firebase.Database.Snapshot.CompoundHash+ISplitStrategy, Xamarin.Firebase.Database;com.google.firebase.database.snapshot.CompoundHash$SplitStrategy
+Firebase.Database.Snapshot.CompoundHash.ISplitStrategy;com.google.firebase.database.snapshot.CompoundHash$SplitStrategy
+com.google.firebase.database.snapshot.CompoundHash$SplitStrategy;com.google.firebase.database.snapshot.CompoundHash$SplitStrategy
+Firebase.Database.Snapshot.INode, Xamarin.Firebase.Database;com.google.firebase.database.snapshot.Node
+Firebase.Database.Snapshot.INode;com.google.firebase.database.snapshot.Node
+com.google.firebase.database.snapshot.Node;com.google.firebase.database.snapshot.Node
+Firebase.Database.Logging.ILogger, Xamarin.Firebase.Database;com.google.firebase.database.logging.Logger
+Firebase.Database.Logging.ILogger;com.google.firebase.database.logging.Logger
+com.google.firebase.database.logging.Logger;com.google.firebase.database.logging.Logger
+Firebase.Database.Core.IAuthTokenProviderGetTokenCompletionListener, Xamarin.Firebase.Database;com.google.firebase.database.core.AuthTokenProvider$GetTokenCompletionListener
+Firebase.Database.Core.IAuthTokenProviderGetTokenCompletionListener;com.google.firebase.database.core.AuthTokenProvider$GetTokenCompletionListener
+com.google.firebase.database.core.AuthTokenProvider$GetTokenCompletionListener;com.google.firebase.database.core.AuthTokenProvider$GetTokenCompletionListener
+Firebase.Database.Core.IAuthTokenProviderGetTokenCompletionListenerImplementor, Xamarin.Firebase.Database;mono.com.google.firebase.database.core.AuthTokenProvider_GetTokenCompletionListenerImplementor
+Firebase.Database.Core.IAuthTokenProviderGetTokenCompletionListenerImplementor;mono.com.google.firebase.database.core.AuthTokenProvider_GetTokenCompletionListenerImplementor
+mono.com.google.firebase.database.core.AuthTokenProvider_GetTokenCompletionListenerImplementor;mono.com.google.firebase.database.core.AuthTokenProvider_GetTokenCompletionListenerImplementor
+Firebase.Database.Core.IAuthTokenProviderTokenChangeListener, Xamarin.Firebase.Database;com.google.firebase.database.core.AuthTokenProvider$TokenChangeListener
+Firebase.Database.Core.IAuthTokenProviderTokenChangeListener;com.google.firebase.database.core.AuthTokenProvider$TokenChangeListener
+com.google.firebase.database.core.AuthTokenProvider$TokenChangeListener;com.google.firebase.database.core.AuthTokenProvider$TokenChangeListener
+Firebase.Database.Core.IAuthTokenProviderTokenChangeListenerImplementor, Xamarin.Firebase.Database;mono.com.google.firebase.database.core.AuthTokenProvider_TokenChangeListenerImplementor
+Firebase.Database.Core.IAuthTokenProviderTokenChangeListenerImplementor;mono.com.google.firebase.database.core.AuthTokenProvider_TokenChangeListenerImplementor
+mono.com.google.firebase.database.core.AuthTokenProvider_TokenChangeListenerImplementor;mono.com.google.firebase.database.core.AuthTokenProvider_TokenChangeListenerImplementor
+Firebase.Database.Core.IAuthTokenProvider, Xamarin.Firebase.Database;com.google.firebase.database.core.AuthTokenProvider
+Firebase.Database.Core.IAuthTokenProvider;com.google.firebase.database.core.AuthTokenProvider
+com.google.firebase.database.core.AuthTokenProvider;com.google.firebase.database.core.AuthTokenProvider
+Firebase.Database.Core.IEventRegistrationZombieListener, Xamarin.Firebase.Database;com.google.firebase.database.core.EventRegistrationZombieListener
+Firebase.Database.Core.IEventRegistrationZombieListener;com.google.firebase.database.core.EventRegistrationZombieListener
+com.google.firebase.database.core.EventRegistrationZombieListener;com.google.firebase.database.core.EventRegistrationZombieListener
+Firebase.Database.Core.IEventRegistrationZombieListenerImplementor, Xamarin.Firebase.Database;mono.com.google.firebase.database.core.EventRegistrationZombieListenerImplementor
+Firebase.Database.Core.IEventRegistrationZombieListenerImplementor;mono.com.google.firebase.database.core.EventRegistrationZombieListenerImplementor
+mono.com.google.firebase.database.core.EventRegistrationZombieListenerImplementor;mono.com.google.firebase.database.core.EventRegistrationZombieListenerImplementor
+Firebase.Database.Core.IEventTarget, Xamarin.Firebase.Database;com.google.firebase.database.core.EventTarget
+Firebase.Database.Core.IEventTarget;com.google.firebase.database.core.EventTarget
+com.google.firebase.database.core.EventTarget;com.google.firebase.database.core.EventTarget
+Firebase.Database.Core.IPlatform, Xamarin.Firebase.Database;com.google.firebase.database.core.Platform
+Firebase.Database.Core.IPlatform;com.google.firebase.database.core.Platform
+com.google.firebase.database.core.Platform;com.google.firebase.database.core.Platform
+Firebase.Database.Core.IRunLoop, Xamarin.Firebase.Database;com.google.firebase.database.core.RunLoop
+Firebase.Database.Core.IRunLoop;com.google.firebase.database.core.RunLoop
+com.google.firebase.database.core.RunLoop;com.google.firebase.database.core.RunLoop
+Firebase.Database.Core.IThreadInitializer, Xamarin.Firebase.Database;com.google.firebase.database.core.ThreadInitializer
+Firebase.Database.Core.IThreadInitializer;com.google.firebase.database.core.ThreadInitializer
+com.google.firebase.database.core.ThreadInitializer;com.google.firebase.database.core.ThreadInitializer
+Firebase.Database.Core.SyncTree+ICompletionListener, Xamarin.Firebase.Database;com.google.firebase.database.core.SyncTree$CompletionListener
+Firebase.Database.Core.SyncTree.ICompletionListener;com.google.firebase.database.core.SyncTree$CompletionListener
+com.google.firebase.database.core.SyncTree$CompletionListener;com.google.firebase.database.core.SyncTree$CompletionListener
+Firebase.Database.Core.SyncTree+ICompletionListenerImplementor, Xamarin.Firebase.Database;mono.com.google.firebase.database.core.SyncTree_CompletionListenerImplementor
+Firebase.Database.Core.SyncTree.ICompletionListenerImplementor;mono.com.google.firebase.database.core.SyncTree_CompletionListenerImplementor
+mono.com.google.firebase.database.core.SyncTree_CompletionListenerImplementor;mono.com.google.firebase.database.core.SyncTree_CompletionListenerImplementor
+Firebase.Database.Core.SyncTree+IListenProvider, Xamarin.Firebase.Database;com.google.firebase.database.core.SyncTree$ListenProvider
+Firebase.Database.Core.SyncTree.IListenProvider;com.google.firebase.database.core.SyncTree$ListenProvider
+com.google.firebase.database.core.SyncTree$ListenProvider;com.google.firebase.database.core.SyncTree$ListenProvider
+Firebase.Database.Core.View.IEvent, Xamarin.Firebase.Database;com.google.firebase.database.core.view.Event
+Firebase.Database.Core.View.IEvent;com.google.firebase.database.core.view.Event
+com.google.firebase.database.core.view.Event;com.google.firebase.database.core.view.Event
+Firebase.Database.Core.View.Filter.INodeFilterCompleteChildSource, Xamarin.Firebase.Database;com.google.firebase.database.core.view.filter.NodeFilter$CompleteChildSource
+Firebase.Database.Core.View.Filter.INodeFilterCompleteChildSource;com.google.firebase.database.core.view.filter.NodeFilter$CompleteChildSource
+com.google.firebase.database.core.view.filter.NodeFilter$CompleteChildSource;com.google.firebase.database.core.view.filter.NodeFilter$CompleteChildSource
+Firebase.Database.Core.View.Filter.INodeFilter, Xamarin.Firebase.Database;com.google.firebase.database.core.view.filter.NodeFilter
+Firebase.Database.Core.View.Filter.INodeFilter;com.google.firebase.database.core.view.filter.NodeFilter
+com.google.firebase.database.core.view.filter.NodeFilter;com.google.firebase.database.core.view.filter.NodeFilter
+Firebase.Database.Core.Utilities.IClock, Xamarin.Firebase.Database;com.google.firebase.database.core.utilities.Clock
+Firebase.Database.Core.Utilities.IClock;com.google.firebase.database.core.utilities.Clock
+com.google.firebase.database.core.utilities.Clock;com.google.firebase.database.core.utilities.Clock
+Firebase.Database.Core.Utilities.ImmutableTree+ITreeVisitor, Xamarin.Firebase.Database;com.google.firebase.database.core.utilities.ImmutableTree$TreeVisitor
+Firebase.Database.Core.Utilities.ImmutableTree.ITreeVisitor;com.google.firebase.database.core.utilities.ImmutableTree$TreeVisitor
+com.google.firebase.database.core.utilities.ImmutableTree$TreeVisitor;com.google.firebase.database.core.utilities.ImmutableTree$TreeVisitor
+Firebase.Database.Core.Utilities.IPredicate, Xamarin.Firebase.Database;com.google.firebase.database.core.utilities.Predicate
+Firebase.Database.Core.Utilities.IPredicate;com.google.firebase.database.core.utilities.Predicate
+com.google.firebase.database.core.utilities.Predicate;com.google.firebase.database.core.utilities.Predicate
+Firebase.Database.Core.Utilities.Tree+ITreeFilter, Xamarin.Firebase.Database;com.google.firebase.database.core.utilities.Tree$TreeFilter
+Firebase.Database.Core.Utilities.Tree.ITreeFilter;com.google.firebase.database.core.utilities.Tree$TreeFilter
+com.google.firebase.database.core.utilities.Tree$TreeFilter;com.google.firebase.database.core.utilities.Tree$TreeFilter
+Firebase.Database.Core.Utilities.Tree+ITreeVisitor, Xamarin.Firebase.Database;com.google.firebase.database.core.utilities.Tree$TreeVisitor
+Firebase.Database.Core.Utilities.Tree.ITreeVisitor;com.google.firebase.database.core.utilities.Tree$TreeVisitor
+com.google.firebase.database.core.utilities.Tree$TreeVisitor;com.google.firebase.database.core.utilities.Tree$TreeVisitor
+Firebase.Database.Core.Persistence.ICachePolicy, Xamarin.Firebase.Database;com.google.firebase.database.core.persistence.CachePolicy
+Firebase.Database.Core.Persistence.ICachePolicy;com.google.firebase.database.core.persistence.CachePolicy
+com.google.firebase.database.core.persistence.CachePolicy;com.google.firebase.database.core.persistence.CachePolicy
+Firebase.Database.Core.Persistence.IPersistenceManager, Xamarin.Firebase.Database;com.google.firebase.database.core.persistence.PersistenceManager
+Firebase.Database.Core.Persistence.IPersistenceManager;com.google.firebase.database.core.persistence.PersistenceManager
+com.google.firebase.database.core.persistence.PersistenceManager;com.google.firebase.database.core.persistence.PersistenceManager
+Firebase.Database.Core.Persistence.IPersistenceStorageEngine, Xamarin.Firebase.Database;com.google.firebase.database.core.persistence.PersistenceStorageEngine
+Firebase.Database.Core.Persistence.IPersistenceStorageEngine;com.google.firebase.database.core.persistence.PersistenceStorageEngine
+com.google.firebase.database.core.persistence.PersistenceStorageEngine;com.google.firebase.database.core.persistence.PersistenceStorageEngine
+Firebase.Database.Connection.IConnectionAuthTokenProviderGetTokenCallback, Xamarin.Firebase.Database;com.google.firebase.database.connection.ConnectionAuthTokenProvider$GetTokenCallback
+Firebase.Database.Connection.IConnectionAuthTokenProviderGetTokenCallback;com.google.firebase.database.connection.ConnectionAuthTokenProvider$GetTokenCallback
+com.google.firebase.database.connection.ConnectionAuthTokenProvider$GetTokenCallback;com.google.firebase.database.connection.ConnectionAuthTokenProvider$GetTokenCallback
+Firebase.Database.Connection.IConnectionAuthTokenProvider, Xamarin.Firebase.Database;com.google.firebase.database.connection.ConnectionAuthTokenProvider
+Firebase.Database.Connection.IConnectionAuthTokenProvider;com.google.firebase.database.connection.ConnectionAuthTokenProvider
+com.google.firebase.database.connection.ConnectionAuthTokenProvider;com.google.firebase.database.connection.ConnectionAuthTokenProvider
+Firebase.Database.Connection.IListenHashProvider, Xamarin.Firebase.Database;com.google.firebase.database.connection.ListenHashProvider
+Firebase.Database.Connection.IListenHashProvider;com.google.firebase.database.connection.ListenHashProvider
+com.google.firebase.database.connection.ListenHashProvider;com.google.firebase.database.connection.ListenHashProvider
+Firebase.Database.Connection.IPersistentConnectionDelegate, Xamarin.Firebase.Database;com.google.firebase.database.connection.PersistentConnection$Delegate
+Firebase.Database.Connection.IPersistentConnectionDelegate;com.google.firebase.database.connection.PersistentConnection$Delegate
+com.google.firebase.database.connection.PersistentConnection$Delegate;com.google.firebase.database.connection.PersistentConnection$Delegate
+Firebase.Database.Connection.IPersistentConnection, Xamarin.Firebase.Database;com.google.firebase.database.connection.PersistentConnection
+Firebase.Database.Connection.IPersistentConnection;com.google.firebase.database.connection.PersistentConnection
+com.google.firebase.database.connection.PersistentConnection;com.google.firebase.database.connection.PersistentConnection
+Firebase.Database.Connection.IRequestResultCallback, Xamarin.Firebase.Database;com.google.firebase.database.connection.RequestResultCallback
+Firebase.Database.Connection.IRequestResultCallback;com.google.firebase.database.connection.RequestResultCallback
+com.google.firebase.database.connection.RequestResultCallback;com.google.firebase.database.connection.RequestResultCallback
+Firebase.Database.Annotations.INotNull, Xamarin.Firebase.Database;com.google.firebase.database.annotations.NotNull
+Firebase.Database.Annotations.INotNull;com.google.firebase.database.annotations.NotNull
+com.google.firebase.database.annotations.NotNull;com.google.firebase.database.annotations.NotNull
+Firebase.Database.Annotations.INullable, Xamarin.Firebase.Database;com.google.firebase.database.annotations.Nullable
+Firebase.Database.Annotations.INullable;com.google.firebase.database.annotations.Nullable
+com.google.firebase.database.annotations.Nullable;com.google.firebase.database.annotations.Nullable
 Google.Android.Material.Transition.IVisibilityAnimatorProvider, Xamarin.Google.Android.Material;com.google.android.material.transition.VisibilityAnimatorProvider
 Google.Android.Material.Transition.IVisibilityAnimatorProvider;com.google.android.material.transition.VisibilityAnimatorProvider
 com.google.android.material.transition.VisibilityAnimatorProvider;com.google.android.material.transition.VisibilityAnimatorProvider
@@ -1903,9 +2041,6 @@ com.google.android.gms.safetynet.SafetyNetApi$SafeBrowsingResult;com.google.andr
 Android.Gms.SafetyNet.ISafetyNetApi, Xamarin.GooglePlayServices.SafetyNet;com.google.android.gms.safetynet.SafetyNetApi
 Android.Gms.SafetyNet.ISafetyNetApi;com.google.android.gms.safetynet.SafetyNetApi
 com.google.android.gms.safetynet.SafetyNetApi;com.google.android.gms.safetynet.SafetyNetApi
-Android.Gms.Stats.ICodePackage, Xamarin.GooglePlayServices.Stats;com.google.android.gms.stats.CodePackage
-Android.Gms.Stats.ICodePackage;com.google.android.gms.stats.CodePackage
-com.google.android.gms.stats.CodePackage;com.google.android.gms.stats.CodePackage
 Android.Gms.Tasks.IContinuation, Xamarin.GooglePlayServices.Tasks;com.google.android.gms.tasks.Continuation
 Android.Gms.Tasks.IContinuation;com.google.android.gms.tasks.Continuation
 com.google.android.gms.tasks.Continuation;com.google.android.gms.tasks.Continuation
