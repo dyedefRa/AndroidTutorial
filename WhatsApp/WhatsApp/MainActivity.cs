@@ -10,6 +10,7 @@ using Google.Android.Material.Tabs;
 using System;
 using System.Linq;
 using WhatsApp.Activities;
+using WhatsApp.Helper;
 using WhatsApp.Models;
 
 namespace WhatsApp
@@ -17,20 +18,24 @@ namespace WhatsApp
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
+        private FirebaseUser currentUser;
+        private FirebaseAuth mAuth;
+
         private Toolbar mToolBar;
         private ViewPager mViewPager;
         private TabLayout mTabLayout;
         private TabsAccessorAdapter mTabsAccessorAdapter;
-
-        private FirebaseUser currentUser;
-
+ 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
+            mAuth = FirebaseAuth.GetInstance(FirebaseClient.GetApp());
+            currentUser = mAuth.CurrentUser;
             //NOTE 1
             mToolBar = FindViewById<Toolbar>(Resource.Id.main_page_toolbar);
             SetSupportActionBar(mToolBar);

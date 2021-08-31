@@ -18,13 +18,13 @@ namespace WhatsApp.Activities
     [Activity(Label = "RegisterActivity")]
     public class RegisterActivity : Activity
     {
-        private Button btnCreateAccount;
-        private EditText txtUserEmail, txtUserPassword;
-        private TextView txtAlreadyHaveAccountLink;
-
         private FirebaseAuth mAuth;
 
         private ProgressDialog loadingBar;
+
+        private Button btnCreateAccount;
+        private EditText txtUserEmail, txtUserPassword;
+        private TextView txtAlreadyHaveAccountLink;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
