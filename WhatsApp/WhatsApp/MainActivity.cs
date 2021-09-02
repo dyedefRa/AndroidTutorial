@@ -2,6 +2,7 @@
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Views;
 using AndroidX.AppCompat.App;
 using AndroidX.AppCompat.Widget;
 using AndroidX.ViewPager.Widget;
@@ -25,7 +26,7 @@ namespace WhatsApp
         private ViewPager mViewPager;
         private TabLayout mTabLayout;
         private TabsAccessorAdapter mTabsAccessorAdapter;
- 
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
 
@@ -71,6 +72,37 @@ namespace WhatsApp
         {
             Intent loginIntent = new Intent(this, typeof(LoginActivity));
             StartActivity(loginIntent);
+
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            //return base.OnCreateOptionsMenu(menu);
+            MenuInflater.Inflate(Resource.Drawable.options_menu, menu);
+
+            return true;
+        }
+
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            //return base.OnOptionsItemSelected(item);
+
+            if (item.ItemId == Resource.Id.main_logout_option)
+            {
+                mAuth.SignOut();
+                SendUserToLoginActivity();
+            }
+            else if (item.ItemId == Resource.Id.main_settings_option)
+            {
+
+            }
+            else if (item.ItemId == Resource.Id.main_find_friends_option)
+            {
+
+            }
+
+            return true;
 
         }
     }

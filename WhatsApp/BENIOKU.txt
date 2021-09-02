@@ -1,3 +1,5 @@
+SORUN optinos_menu de ki menulerin rengi deðiþmedi o yuzden gozukmuyor. Ama fonk calýsýyor.
+
 ----------------------------------------------
  app_bar_layout.xml adýnda ToolBar oluþturduk  (androidx.appcompat.widget.Toolbar) => 
   ve bu xml uzantýlý toolbarý  activity_main sayfasýnýn include ile tanýttýk ;
@@ -49,5 +51,30 @@ Tablayouta view pageyi verdik
         {
             Intent loginIntent = new Intent(this, typeof(LoginActivity));
             StartActivity(loginIntent);
+
+        }
+
+----------------------------------------------
+MENU OLUSTURMAK  (3 dots)
+drawable > options_menu oluþturduk ve
+
+MainActivityde bu menu yu mainactivityin view ine tanýttýk ve id ile týklanýlan menunu hangi deðerine oldugunu saptadýk ve ýlgýlý yonlendýrmeyý yaptýk .Yani;
+
+     public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Drawable.options_menu, menu);
+            return true;
+        }
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            //return base.OnOptionsItemSelected(item);
+
+            if (item.ItemId == Resource.Id.main_logout_option)
+            {
+                mAuth.SignOut();
+                SendUserToLoginActivity();
+            }
+
+            return true;
 
         }
