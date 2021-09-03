@@ -101,3 +101,10 @@ https://console.firebase.google.com/project/whatsapp-81d75/database/whatsapp-81d
 --------Circle image
 
 de.hdodenhof.circleimageview 
+
+-------------
+FirebaseClient >
+    //bu name propertisinden user in usernamýný olusturup oýlsturmadýgýný kontrol edýyoruz .ona göre main yada setting activitye gonderýyoruz
+        public static string UserExistencePropertyStaticName = "name";
+
+MyEventListener de de bunu kullanýyoruz.

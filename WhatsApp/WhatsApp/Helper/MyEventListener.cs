@@ -12,6 +12,8 @@
 //using System.Text;
 //using WhatsApp.Activities;
 
+//BURASI 2
+
 //namespace WhatsApp.Helper
 //{
 //    public class MyEventListener : IValueEventListener
@@ -38,7 +40,7 @@
 
 //        public int JniIdentityHashCode => throw new NotImplementedException();
 
-//        public JniObjectReference PeerReference => throw new NotImplementedException();
+//        public Java.Interop.JniObjectReference PeerReference => throw new NotImplementedException();
 
 //        public JniPeerMembers JniPeerMembers => throw new NotImplementedException();
 

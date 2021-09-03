@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using WhatsApp.Helper;
 
 namespace WhatsApp.Activities
 {
@@ -20,7 +21,6 @@ namespace WhatsApp.Activities
         private Button updateAccountSettings;
         private EditText userName, userStatus;
         private CircleImageView userProfileImage;
-        private string currentUserId;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -61,10 +61,43 @@ namespace WhatsApp.Activities
             }
             else
             {
-            //    HashMap gsag = new HashMap();
-            //    gsag.Put()
-            //    Java.Util.HashMap<string, string> profileMap = new Java.Util.HashMap<string, string>();
+                string currentUserId = FirebaseClient.GetCurrentUserId;
+                HashMap profileMap = new HashMap();
+                profileMap.Put("uid", currentUserId);
+                profileMap.Put(FirebaseClient.UserExistencePropertyStaticName, setUserName);
+                profileMap.Put("status", setUserName);
+
+                TaskCompletionListener taskCompletionListener = new TaskCompletionListener();
+                taskCompletionListener.Success += TaskCompletionListener_Success;
+                taskCompletionListener.Failure += TaskCompletionListener_Failure;
+
+                FirebaseClient.GetDatabaseReference()
+                    .Child("Users")
+                    .Child(currentUserId)
+                    .SetValue(profileMap)
+                    .AddOnSuccessListener(taskCompletionListener)
+                    .AddOnFailureListener(taskCompletionListener);
             }
+        }
+
+        private void TaskCompletionListener_Success(object sender, EventArgs e)
+        {
+            Toast.MakeText(this, "Profile Updated Successfully", ToastLength.Short);
+            SendUserToMainActivity();
+        }
+
+        private void TaskCompletionListener_Failure(object sender, EventArgs e)
+        {
+
+            Toast.MakeText(this, "ERROR !", ToastLength.Short);
+        }
+
+        private void SendUserToMainActivity()
+        {
+            Intent mainIntent = new Intent(this, typeof(MainActivity));
+            mainIntent.AddFlags(ActivityFlags.NewTask | ActivityFlags.ClearTask);
+            StartActivity(mainIntent);
+            Finish();
         }
 
 

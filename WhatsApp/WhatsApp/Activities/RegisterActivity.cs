@@ -19,11 +19,7 @@ namespace WhatsApp.Activities
     [Activity(Label = "RegisterActivity")]
     public class RegisterActivity : Activity
     {
-        private FirebaseAuth mAuth;
-        private DatabaseReference rootReference;
-
         private ProgressDialog loadingBar;
-
         private Button btnCreateAccount;
         private EditText txtUserEmail, txtUserPassword;
         private TextView txtAlreadyHaveAccountLink;
@@ -32,9 +28,6 @@ namespace WhatsApp.Activities
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.register_activity);
-
-            mAuth = FirebaseAuth.GetInstance(FirebaseClient.GetFirebaseApp());
-            rootReference = FirebaseClient.GetDatabaseReference();
 
             InitializeFields();
             btnCreateAccount.Click += BtnCreateAccount_Click;
@@ -78,27 +71,21 @@ namespace WhatsApp.Activities
                 taskCompletionListener.Success += TaskCompletionListener_Success;
                 taskCompletionListener.Failure += TaskCompletionListener_Failure;
 
-                mAuth.CreateUserWithEmailAndPassword(userEmail, userPassword)
+                FirebaseClient.GetFirebaseAuth().CreateUserWithEmailAndPassword(userEmail, userPassword)
                .AddOnSuccessListener(taskCompletionListener)
             .AddOnFailureListener(taskCompletionListener);
             }
-
         }
 
         private void TaskCompletionListener_Success(object sender, EventArgs e)
         {
 
-            string currentUserId = mAuth.CurrentUser.Uid;
-            rootReference.Child("Users").Child(currentUserId).SetValue("");
+            string currentUserId = FirebaseClient.GetCurrentUserId;
+            FirebaseClient.GetDatabaseReference().Child("Users").Child(currentUserId).SetValue("");
 
             SendUserToMainActivity();
-
-            Toast.MakeText(this, "Account Created Successfully", ToastLength.Short)
-                     .Show();
+            Toast.MakeText(this, "Account Created Successfully", ToastLength.Short).Show();
             loadingBar.Dismiss();
-
-
-          
         }
 
         private void TaskCompletionListener_Failure(object sender, EventArgs e)
@@ -117,7 +104,6 @@ namespace WhatsApp.Activities
         {
             Intent loginIntent = new Intent(this, typeof(LoginActivity));
             StartActivity(loginIntent);
-
         }
 
         private void SendUserToMainActivity()

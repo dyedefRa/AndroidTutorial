@@ -16,9 +16,6 @@ namespace WhatsApp.Activities
     [Activity(Label = "LoginActivity")]
     public class LoginActivity : Activity
     {
-        //private FirebaseUser currentUser;
-        private FirebaseAuth mAuth;
-
         private ProgressDialog loadingBar;
 
         private Button btnLogin, btnPhoneLogin;
@@ -29,9 +26,6 @@ namespace WhatsApp.Activities
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.login_activity);
-
-            mAuth = FirebaseAuth.GetInstance(FirebaseClient.GetFirebaseApp());
-            //currentUser = mAuth.CurrentUser;
 
             InitializeFields();
 
@@ -57,15 +51,6 @@ namespace WhatsApp.Activities
             loadingBar.SetCanceledOnTouchOutside(true);
             loadingBar.Show();
         }
-
-        protected override void OnStart()
-        {
-            base.OnStart();
-
-            //if (currentUser != null)
-            //    SendUserToMainActivity();
-        }
-
 
         private void SendUserToMainActivity()
         {
@@ -106,14 +91,11 @@ namespace WhatsApp.Activities
                 .Show();
             else
             {
-                //    ProgressBarInitialize();
-
                 TaskCompletionListener taskCompletionListener = new TaskCompletionListener();
                 taskCompletionListener.Success += TaskCompletionListener_Success; taskCompletionListener.Failure += TaskCompletionListener_Failure;
-                mAuth.SignInWithEmailAndPassword(userEmail, userPassword)
+                FirebaseClient.GetFirebaseAuth().SignInWithEmailAndPassword(userEmail, userPassword)
                    .AddOnSuccessListener(taskCompletionListener)
                 .AddOnFailureListener(taskCompletionListener);
-
             }
         }
 
@@ -131,7 +113,5 @@ namespace WhatsApp.Activities
              .Show();
             loadingBar.Dismiss();
         }
-
-
     }
 }

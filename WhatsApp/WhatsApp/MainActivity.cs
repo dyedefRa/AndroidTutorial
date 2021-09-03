@@ -20,13 +20,7 @@ namespace WhatsApp
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
-    {
-        private FirebaseUser currentUser;
-        //bunla auth işlemi yapıyoruz
-        private FirebaseAuth mAuth;
-        //Bunu realtimedb de yer açmak yada kayıt almak için eklıyoruz
-        private DatabaseReference rootReference;
-
+    { 
         private Toolbar mToolBar;
         private ViewPager mViewPager;
         private TabLayout mTabLayout;
@@ -34,16 +28,10 @@ namespace WhatsApp
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
-
-            mAuth = FirebaseAuth.GetInstance(FirebaseClient.GetFirebaseApp());
-            currentUser = mAuth.CurrentUser;
-            rootReference = FirebaseClient.GetDatabaseReference();
-
 
             //NOTE 1
             mToolBar = FindViewById<Toolbar>(Resource.Id.main_page_toolbar);
@@ -63,34 +51,32 @@ namespace WhatsApp
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
         protected override void OnStart()
         {
             base.OnStart();
-            if (currentUser == null)
+            if (FirebaseClient.GetCurrentUser() == null)
             {
                 SendUserToLoginActivity();
             }
-            //else
-            //{
-            //    //Eğer user null degilse
-            //    VerifyUserExistance();
-            //}
+            else
+            {
+                //Eğer user null degilse
+                VerifyUserExistance();
+            }
         }
 
         private void VerifyUserExistance()
         {
-            string currentUserId = mAuth.CurrentUser.Uid;
+            string currentUserId = FirebaseClient.GetCurrentUserId;
 
             //Eğer user null degilse name propertisine bak. (MyEventListener da var)
-            //Eger name prop null degılse Welcome yaz degılse Setting sayfasına yonlendır.1
-            //rootReference.Child(currentUserId).AddValueEventListener(new MyEventListener());
+            //Eger name prop null degılse Welcome yaz degılse Setting sayfasına yonlendır.
+            //BURASI1
+            //FirebaseClient.GetDatabaseReference().Child(currentUserId).AddValueEventListener(new MyEventListener());
         }
-
-
 
         private void SendUserToLoginActivity()
         {
@@ -102,12 +88,9 @@ namespace WhatsApp
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
-            //return base.OnCreateOptionsMenu(menu);
             MenuInflater.Inflate(Resource.Drawable.options_menu, menu);
-
             return true;
         }
-
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
@@ -115,7 +98,7 @@ namespace WhatsApp
 
             if (item.ItemId == Resource.Id.main_logout_option)
             {
-                mAuth.SignOut();
+                FirebaseClient.GetFirebaseAuth().SignOut();
                 SendUserToLoginActivity();
             }
             else if (item.ItemId == Resource.Id.main_settings_option)
@@ -126,9 +109,7 @@ namespace WhatsApp
             {
 
             }
-
             return true;
-
         }
 
         private void SendUserToSettingsActivity()
@@ -137,7 +118,6 @@ namespace WhatsApp
             settingsIntent.AddFlags(ActivityFlags.NewTask | ActivityFlags.ClearTask);
             StartActivity(settingsIntent);
             Finish();
-        }
-      
+        }    
     }
 }
