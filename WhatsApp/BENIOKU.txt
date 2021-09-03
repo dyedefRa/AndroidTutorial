@@ -55,6 +55,8 @@ Tablayouta view pageyi verdik
         }
 
 ----------------------------------------------
+Firebaseclient a odaklan. Auth oluþturduk. google-service.json ile.
+----------------------------------------------
 MENU OLUSTURMAK  (3 dots)
 drawable > options_menu oluþturduk ve
 
@@ -78,3 +80,24 @@ MainActivityde bu menu yu mainactivityin view ine tanýttýk ve id ile týklanýlan 
             return true;
 
         }
+ ------------------------------------
+ REALTIME DB KULLANIMI !:!:! 
+  
+oluþturduk ve
+ Kullanýcý giriþ yaptýgýnda o kullanýcýnýn idsine göre bir REALTIME Db de yer AÇTIK;
+Yani;
+
+FirebaseClient > GetDatabaseReference dan  method çekerek RegisterActivity da dtabase reference kullandýk .Yani;
+   DatabaseReference dbref = FirebaseDatabase.GetInstance(GetFirebaseApp()).GetReference("WhatsAppDb");    
+            return dbref;
+            Ve
+RegisterActivity> TaskCompletionListener_Success da bunu kullandýk.Yani ;       
+          string currentUserId = mAuth.CurrentUser.Uid;
+            rootReference.Child("Users").Child(currentUserId).SetValue("");
+bununla Realtime db de yer açtýk.
+
+firebaseurli:
+https://console.firebase.google.com/project/whatsapp-81d75/database/whatsapp-81d75-default-rtdb/data?hl=tr
+--------Circle image
+
+de.hdodenhof.circleimageview 

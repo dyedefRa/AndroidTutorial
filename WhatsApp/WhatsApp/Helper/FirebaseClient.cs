@@ -40,7 +40,7 @@ namespace WhatsApp.Helper
         //    Toast.MakeText(Application.Context, "Completed", ToastLength.Short).Show();
         //}
 
-        public static FirebaseApp GetApp()
+        public static FirebaseApp GetFirebaseApp()
         {
             var app = FirebaseApp.InitializeApp(Application.Context);
 
@@ -57,5 +57,18 @@ namespace WhatsApp.Helper
 
             return app;
         }
+
+        public static DatabaseReference GetDatabaseReference()
+        {
+            DatabaseReference dbref = FirebaseDatabase.GetInstance(GetFirebaseApp()).GetReference("WhatsAppDb");    
+            return dbref;
+        }
+
+
+
+        //public static string GetCurrentUserId()
+        //{
+        //    return GetDatabaseReference()
+        //}
     }
 }

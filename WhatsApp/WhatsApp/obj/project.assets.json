@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v11.0": {
+      "de.hdodenhof.circleimageview/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-rc1"
+        },
+        "compile": {
+          "lib/MonoAndroid90/de.hdodenhof.circleimageview.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid90/de.hdodenhof.circleimageview.dll": {}
+        }
+      },
       "System.Json/4.5.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -1442,6 +1454,18 @@
     }
   },
   "libraries": {
+    "de.hdodenhof.circleimageview/3.1.0": {
+      "sha512": "xmiXqPQZBoO1vZ1KIt9lmj0PqAWKCVvC+lmVusaPRaS+ol7q9bJtUqNd1zxIIu6z/KGBq6PuW6W03/f2U5H+1w==",
+      "type": "package",
+      "path": "de.hdodenhof.circleimageview/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "de.hdodenhof.circleimageview.3.1.0.nupkg.sha512",
+        "de.hdodenhof.circleimageview.nuspec",
+        "lib/MonoAndroid90/de.hdodenhof.circleimageview.dll"
+      ]
+    },
     "System.Json/4.5.0": {
       "sha512": "qa/n31qUQ1qEACgCCHVU20BEvkGQtIlOANSjn9TjmRnxDl/KSYrRzTS83iOuCSr/37BfueFSXHobhZhNUksqVQ==",
       "type": "package",
@@ -2776,7 +2800,8 @@
       "Xamarin.Essentials >= 1.7.0",
       "Xamarin.Firebase.Auth >= 121.0.1.1",
       "Xamarin.Firebase.Database >= 119.7.0",
-      "Xamarin.Google.Android.Material >= 1.4.0.2"
+      "Xamarin.Google.Android.Material >= 1.4.0.2",
+      "de.hdodenhof.circleimageview >= 3.1.0"
     ]
   },
   "packageFolders": {
@@ -2836,6 +2861,10 @@
           "Xamarin.Google.Android.Material": {
             "target": "Package",
             "version": "[1.4.0.2, )"
+          },
+          "de.hdodenhof.circleimageview": {
+            "target": "Package",
+            "version": "[3.1.0, )"
           }
         }
       }

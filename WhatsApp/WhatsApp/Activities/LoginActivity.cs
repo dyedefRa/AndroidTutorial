@@ -16,7 +16,7 @@ namespace WhatsApp.Activities
     [Activity(Label = "LoginActivity")]
     public class LoginActivity : Activity
     {
-        private FirebaseUser currentUser;
+        //private FirebaseUser currentUser;
         private FirebaseAuth mAuth;
 
         private ProgressDialog loadingBar;
@@ -30,8 +30,8 @@ namespace WhatsApp.Activities
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.login_activity);
 
-            mAuth = FirebaseAuth.GetInstance(FirebaseClient.GetApp());
-            currentUser = mAuth.CurrentUser;
+            mAuth = FirebaseAuth.GetInstance(FirebaseClient.GetFirebaseApp());
+            //currentUser = mAuth.CurrentUser;
 
             InitializeFields();
 
@@ -62,14 +62,17 @@ namespace WhatsApp.Activities
         {
             base.OnStart();
 
-            if (currentUser != null)
-                SendUserToMainActivity();
+            //if (currentUser != null)
+            //    SendUserToMainActivity();
         }
+
 
         private void SendUserToMainActivity()
         {
-            Intent sendtoMainIntent = new Intent(this, typeof(MainActivity));
-            StartActivity(sendtoMainIntent);
+            Intent mainIntent = new Intent(this, typeof(MainActivity));
+            mainIntent.AddFlags(ActivityFlags.NewTask | ActivityFlags.ClearTask);
+            StartActivity(mainIntent);
+            Finish();
         }
 
         private void TxtNeedNewAccountLink_Click(object sender, EventArgs e)

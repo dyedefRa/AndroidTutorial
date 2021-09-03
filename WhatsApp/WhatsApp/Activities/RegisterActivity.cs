@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Firebase;
 using Firebase.Auth;
+using Firebase.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,7 @@ namespace WhatsApp.Activities
     public class RegisterActivity : Activity
     {
         private FirebaseAuth mAuth;
+        private DatabaseReference rootReference;
 
         private ProgressDialog loadingBar;
 
@@ -31,41 +33,12 @@ namespace WhatsApp.Activities
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.register_activity);
 
-            mAuth = FirebaseAuth.GetInstance(FirebaseClient.GetApp());
-
+            mAuth = FirebaseAuth.GetInstance(FirebaseClient.GetFirebaseApp());
+            rootReference = FirebaseClient.GetDatabaseReference();
 
             InitializeFields();
-            btnCreateAccount.Click += (s, e) =>
-            {
-                string userEmail = txtUserEmail.Text;
-                string userPassword = txtUserPassword.Text;
-
-                if (string.IsNullOrEmpty(userEmail))
-                    Toast.MakeText(this, "Please enter email.", ToastLength.Short)
-                    .Show();
-                else if (string.IsNullOrEmpty(userEmail))
-                    Toast.MakeText(this, "Please enter password.", ToastLength.Short)
-                    .Show();
-                else
-                {
-                    ProgressBarInitialize();
-
-                    TaskCompletionListener taskCompletionListener = new TaskCompletionListener();
-                    taskCompletionListener.Success += TaskCompletionListener_Success;
-                    taskCompletionListener.Failure += TaskCompletionListener_Failure;
-
-                    mAuth.CreateUserWithEmailAndPassword(userEmail, userPassword)
-                   .AddOnSuccessListener(taskCompletionListener)
-                .AddOnFailureListener(taskCompletionListener);
-
-                }
-            };
+            btnCreateAccount.Click += BtnCreateAccount_Click;
             txtAlreadyHaveAccountLink.Click += TxtAlreadyHaveAccountLink_Click;
-        }
-
-        private void TxtAlreadyHaveAccountLink_Click(object sender, EventArgs e)
-        {
-            SendUserToLoginActivity();
         }
 
         private void InitializeFields()
@@ -85,6 +58,49 @@ namespace WhatsApp.Activities
             loadingBar.Show();
         }
 
+        private void BtnCreateAccount_Click(object sender, EventArgs e)
+        {
+            string userEmail = txtUserEmail.Text;
+            string userPassword = txtUserPassword.Text;
+
+            if (string.IsNullOrEmpty(userEmail))
+                Toast.MakeText(this, "Please enter email.", ToastLength.Short)
+                .Show();
+            else if (string.IsNullOrEmpty(userEmail))
+                Toast.MakeText(this, "Please enter password.", ToastLength.Short)
+                .Show();
+            else
+            {
+                //ALLOW REDICTION
+                ProgressBarInitialize();
+
+                TaskCompletionListener taskCompletionListener = new TaskCompletionListener();
+                taskCompletionListener.Success += TaskCompletionListener_Success;
+                taskCompletionListener.Failure += TaskCompletionListener_Failure;
+
+                mAuth.CreateUserWithEmailAndPassword(userEmail, userPassword)
+               .AddOnSuccessListener(taskCompletionListener)
+            .AddOnFailureListener(taskCompletionListener);
+            }
+
+        }
+
+        private void TaskCompletionListener_Success(object sender, EventArgs e)
+        {
+
+            string currentUserId = mAuth.CurrentUser.Uid;
+            rootReference.Child("Users").Child(currentUserId).SetValue("");
+
+            SendUserToMainActivity();
+
+            Toast.MakeText(this, "Account Created Successfully", ToastLength.Short)
+                     .Show();
+            loadingBar.Dismiss();
+
+
+          
+        }
+
         private void TaskCompletionListener_Failure(object sender, EventArgs e)
         {
             Toast.MakeText(this, "HATA !", ToastLength.Short)
@@ -92,11 +108,8 @@ namespace WhatsApp.Activities
             loadingBar.Dismiss();
         }
 
-        private void TaskCompletionListener_Success(object sender, EventArgs e)
+        private void TxtAlreadyHaveAccountLink_Click(object sender, EventArgs e)
         {
-            Toast.MakeText(this, "Account Created Successfully", ToastLength.Short)
-                     .Show();
-            loadingBar.Dismiss();
             SendUserToLoginActivity();
         }
 
@@ -105,6 +118,14 @@ namespace WhatsApp.Activities
             Intent loginIntent = new Intent(this, typeof(LoginActivity));
             StartActivity(loginIntent);
 
+        }
+
+        private void SendUserToMainActivity()
+        {
+            Intent mainIntent = new Intent(this, typeof(MainActivity));
+            mainIntent.AddFlags(ActivityFlags.NewTask | ActivityFlags.ClearTask);
+            StartActivity(mainIntent);
+            Finish();
         }
     }
 }

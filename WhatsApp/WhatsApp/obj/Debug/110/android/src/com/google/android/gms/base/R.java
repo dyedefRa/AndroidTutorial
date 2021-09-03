@@ -10,10 +10,10 @@ public final class R {
 	public static final class attr {
 		public static final int buttonSize = 0x7f03007c;
 		public static final int circleCrop = 0x7f0300b2;
-		public static final int colorScheme = 0x7f0300e0;
-		public static final int imageAspectRatio = 0x7f0301b7;
-		public static final int imageAspectRatioAdjust = 0x7f0301b8;
-		public static final int scopeUris = 0x7f0302f0;
+		public static final int colorScheme = 0x7f0300e4;
+		public static final int imageAspectRatio = 0x7f0301bb;
+		public static final int imageAspectRatioAdjust = 0x7f0301bc;
+		public static final int scopeUris = 0x7f0302f4;
 	}
 	public static final class color {
 		public static final int common_google_signin_btn_text_dark = 0x7f050036;
@@ -48,8 +48,8 @@ public final class R {
 		public static final int common_google_signin_btn_text_light_focused = 0x7f070070;
 		public static final int common_google_signin_btn_text_light_normal = 0x7f070071;
 		public static final int common_google_signin_btn_text_light_normal_background = 0x7f070072;
-		public static final int googleg_disabled_color_18 = 0x7f070079;
-		public static final int googleg_standard_color_18 = 0x7f07007a;
+		public static final int googleg_disabled_color_18 = 0x7f07007b;
+		public static final int googleg_standard_color_18 = 0x7f07007c;
 	}
 	public static final class id {
 		public static final int adjust_height = 0x7f080047;
@@ -59,8 +59,8 @@ public final class R {
 		public static final int icon_only = 0x7f0800da;
 		public static final int light = 0x7f0800ed;
 		public static final int none = 0x7f080142;
-		public static final int standard = 0x7f08019d;
-		public static final int wide = 0x7f0801e9;
+		public static final int standard = 0x7f0801a0;
+		public static final int wide = 0x7f0801ed;
 	}
 	public static final class string {
 		public static final int common_google_play_services_enable_button = 0x7f0e0025;
@@ -82,11 +82,11 @@ public final class R {
 		public static final int common_signin_button_text_long = 0x7f0e0036;
 	}
 	public static final class styleable {
-		public static final int[] LoadingImageView = new int[] { 0x7f0300b2, 0x7f0301b7, 0x7f0301b8 };
+		public static final int[] LoadingImageView = new int[] { 0x7f0300b2, 0x7f0301bb, 0x7f0301bc };
 		public static final int LoadingImageView_circleCrop = 0;
 		public static final int LoadingImageView_imageAspectRatio = 1;
 		public static final int LoadingImageView_imageAspectRatioAdjust = 2;
-		public static final int[] SignInButton = new int[] { 0x7f03007c, 0x7f0300e0, 0x7f0302f0 };
+		public static final int[] SignInButton = new int[] { 0x7f03007c, 0x7f0300e4, 0x7f0302f4 };
 		public static final int SignInButton_buttonSize = 0;
 		public static final int SignInButton_colorScheme = 1;
 		public static final int SignInButton_scopeUris = 2;

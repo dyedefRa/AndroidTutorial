@@ -7,7 +7,9 @@ using AndroidX.AppCompat.App;
 using AndroidX.AppCompat.Widget;
 using AndroidX.ViewPager.Widget;
 using Firebase.Auth;
+using Firebase.Database;
 using Google.Android.Material.Tabs;
+
 using System;
 using System.Linq;
 using WhatsApp.Activities;
@@ -20,7 +22,10 @@ namespace WhatsApp
     public class MainActivity : AppCompatActivity
     {
         private FirebaseUser currentUser;
+        //bunla auth işlemi yapıyoruz
         private FirebaseAuth mAuth;
+        //Bunu realtimedb de yer açmak yada kayıt almak için eklıyoruz
+        private DatabaseReference rootReference;
 
         private Toolbar mToolBar;
         private ViewPager mViewPager;
@@ -35,8 +40,11 @@ namespace WhatsApp
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
-            mAuth = FirebaseAuth.GetInstance(FirebaseClient.GetApp());
+            mAuth = FirebaseAuth.GetInstance(FirebaseClient.GetFirebaseApp());
             currentUser = mAuth.CurrentUser;
+            rootReference = FirebaseClient.GetDatabaseReference();
+
+
             //NOTE 1
             mToolBar = FindViewById<Toolbar>(Resource.Id.main_page_toolbar);
             SetSupportActionBar(mToolBar);
@@ -66,13 +74,30 @@ namespace WhatsApp
             {
                 SendUserToLoginActivity();
             }
+            //else
+            //{
+            //    //Eğer user null degilse
+            //    VerifyUserExistance();
+            //}
         }
+
+        private void VerifyUserExistance()
+        {
+            string currentUserId = mAuth.CurrentUser.Uid;
+
+            //Eğer user null degilse name propertisine bak. (MyEventListener da var)
+            //Eger name prop null degılse Welcome yaz degılse Setting sayfasına yonlendır.1
+            //rootReference.Child(currentUserId).AddValueEventListener(new MyEventListener());
+        }
+
+
 
         private void SendUserToLoginActivity()
         {
             Intent loginIntent = new Intent(this, typeof(LoginActivity));
+            loginIntent.AddFlags(ActivityFlags.NewTask | ActivityFlags.ClearTask);
             StartActivity(loginIntent);
-
+            Finish();
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -95,7 +120,7 @@ namespace WhatsApp
             }
             else if (item.ItemId == Resource.Id.main_settings_option)
             {
-
+                SendUserToSettingsActivity();
             }
             else if (item.ItemId == Resource.Id.main_find_friends_option)
             {
@@ -105,5 +130,14 @@ namespace WhatsApp
             return true;
 
         }
+
+        private void SendUserToSettingsActivity()
+        {
+            Intent settingsIntent = new Intent(this, typeof(SettingsActivity));
+            settingsIntent.AddFlags(ActivityFlags.NewTask | ActivityFlags.ClearTask);
+            StartActivity(settingsIntent);
+            Finish();
+        }
+      
     }
 }

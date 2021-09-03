@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UUZom+bR3EWbwRJrjxM4zrNrGFJ18oz6j74d6ItFO9iPWEgoH790oiNPugsoSRRRkoBiBop+s4Z6ffrIp69Ytw==",
+  "dgSpecHash": "fb1l0Rj26RzsLCJTGxZmJOWUgqc/5z2Qe1+2klg37PzOYnZjTfhTQR8hcR+EC2Fpz//Kntk5NaRar/nymzZBBQ==",
   "success": true,
   "projectFilePath": "D:\\ANDROIDAPPS\\WhatsApp\\WhatsApp\\WhatsApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\msi-nb\\.nuget\\packages\\de.hdodenhof.circleimageview\\3.1.0\\de.hdodenhof.circleimageview.3.1.0.nupkg.sha512",
     "C:\\Users\\msi-nb\\.nuget\\packages\\system.json\\4.5.0\\system.json.4.5.0.nupkg.sha512",
     "C:\\Users\\msi-nb\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\msi-nb\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",
