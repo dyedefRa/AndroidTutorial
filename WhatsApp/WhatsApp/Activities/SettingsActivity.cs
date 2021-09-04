@@ -65,7 +65,7 @@ namespace WhatsApp.Activities
                 HashMap profileMap = new HashMap();
                 profileMap.Put("uid", currentUserId);
                 profileMap.Put(FirebaseClient.UserExistencePropertyStaticName, setUserName);
-                profileMap.Put("status", setUserName);
+                profileMap.Put("status", setUserStatus);
 
                 TaskCompletionListener taskCompletionListener = new TaskCompletionListener();
                 taskCompletionListener.Success += TaskCompletionListener_Success;

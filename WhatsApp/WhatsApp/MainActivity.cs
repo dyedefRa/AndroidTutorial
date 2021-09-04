@@ -75,7 +75,7 @@ namespace WhatsApp
             //Eğer user null degilse name propertisine bak. (MyEventListener da var)
             //Eger name prop null degılse Welcome yaz degılse Setting sayfasına yonlendır.
             //BURASI1
-            //FirebaseClient.GetDatabaseReference().Child(currentUserId).AddValueEventListener(new MyEventListener());
+            FirebaseClient.GetDatabaseReference().Child("Users").Child(currentUserId).AddValueEventListener(new MyEventListener());
         }
 
         private void SendUserToLoginActivity()
