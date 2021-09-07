@@ -68,7 +68,9 @@
     <Compile Include="Fragments\ContactFragment.cs" />
     <Compile Include="Fragments\GroupFragment.cs" />
     <Compile Include="Helper\FirebaseClient.cs" />
+    <Compile Include="Helper\FirebaseValuEventListener.cs" />
     <Compile Include="Helper\MyEventListener.cs" />
+    <Compile Include="Helper\MyRetrieveUserEventListener.cs" />
     <Compile Include="Helper\TaskCompletionListener.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Models\TabsAccessorAdapter.cs" />

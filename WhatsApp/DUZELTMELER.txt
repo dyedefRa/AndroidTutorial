@@ -1,0 +1,6 @@
+MyEventlisteri FirebaseValueEventListernera cek.
+
+SORUN optinos_menu de ki menulerin rengi deðiþmedi o yuzden gozukmuyor. Ama fonk calýsýyor.
+
+
+MyRetrieveUserEventListener HATALI ACTIVITYLE USRENMAE ERISILMIYOR:

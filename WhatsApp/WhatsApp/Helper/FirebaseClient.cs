@@ -18,11 +18,9 @@ namespace WhatsApp.Helper
     {
         private static string ReferenceName = "WhatsAppDb";
 
-        public static string GetCurrentUserId = GetCurrentUser().Uid;
-
         //bu name propertisinden user in usernamını olusturup oılsturmadıgını kontrol edıyoruz .ona göre main yada setting activitye gonderıyoruz
         public static string UserExistencePropertyStaticName = "name";
-
+        public static string UserExistencePropertyStaticImageName = "image";
         //Create User Login Logout methodları. Auth methodları yanı
         public static FirebaseAuth GetFirebaseAuth()
         {
@@ -38,7 +36,7 @@ namespace WhatsApp.Helper
 
         public static FirebaseUser GetCurrentUser()
         {
-            return GetFirebaseAuth().CurrentUser;
+            return GetFirebaseAuth().CurrentUser;                
         }
 
      

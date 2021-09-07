@@ -1,4 +1,4 @@
-SORUN optinos_menu de ki menulerin rengi deðiþmedi o yuzden gozukmuyor. Ama fonk calýsýyor.
+
 
 ----------------------------------------------
  app_bar_layout.xml adýnda ToolBar oluþturduk  (androidx.appcompat.widget.Toolbar) => 

@@ -54,6 +54,9 @@ namespace WhatsApp
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
+        //Main activity başlamadan once eger current user yoksa logine at.
+        //Varsa VerifyUserExistance() a bak. ;;
+        //Eger name prop null degılse Welcome yaz degılse Setting sayfasına yonlendır.
         protected override void OnStart()
         {
             base.OnStart();
@@ -63,21 +66,20 @@ namespace WhatsApp
             }
             else
             {
-                //Eğer user null degilse
                 VerifyUserExistance();
             }
         }
 
         private void VerifyUserExistance()
         {
-            string currentUserId = FirebaseClient.GetCurrentUserId;
+            string currentUserId = FirebaseClient.GetCurrentUser().Uid;
 
             //Eğer user null degilse name propertisine bak. (MyEventListener da var)
             //Eger name prop null degılse Welcome yaz degılse Setting sayfasına yonlendır.
-            //BURASI1
+         
             FirebaseClient.GetDatabaseReference().Child("Users").Child(currentUserId).AddValueEventListener(new MyEventListener());
         }
-
+ 
         private void SendUserToLoginActivity()
         {
             Intent loginIntent = new Intent(this, typeof(LoginActivity));
@@ -94,8 +96,6 @@ namespace WhatsApp
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            //return base.OnOptionsItemSelected(item);
-
             if (item.ItemId == Resource.Id.main_logout_option)
             {
                 FirebaseClient.GetFirebaseAuth().SignOut();

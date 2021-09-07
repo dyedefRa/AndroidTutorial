@@ -17,7 +17,6 @@ namespace WhatsApp.Activities
     [Activity(Label = "SettingsActivity")]
     public class SettingsActivity : Activity
     {
-
         private Button updateAccountSettings;
         private EditText userName, userStatus;
         private CircleImageView userProfileImage;
@@ -29,8 +28,9 @@ namespace WhatsApp.Activities
             SetContentView(Resource.Layout.settings_activity);
 
             InitializeFields();
-
             updateAccountSettings.Click += UpdateAccountSettings_Click;
+
+            RetrieveUserInformation();
         }
 
         private void InitializeFields()
@@ -61,7 +61,7 @@ namespace WhatsApp.Activities
             }
             else
             {
-                string currentUserId = FirebaseClient.GetCurrentUserId;
+                var currentUserId = FirebaseClient.GetCurrentUser().Uid;
                 HashMap profileMap = new HashMap();
                 profileMap.Put("uid", currentUserId);
                 profileMap.Put(FirebaseClient.UserExistencePropertyStaticName, setUserName);
@@ -88,7 +88,6 @@ namespace WhatsApp.Activities
 
         private void TaskCompletionListener_Failure(object sender, EventArgs e)
         {
-
             Toast.MakeText(this, "ERROR !", ToastLength.Short);
         }
 
@@ -100,6 +99,15 @@ namespace WhatsApp.Activities
             Finish();
         }
 
+        private void RetrieveUserInformation()
+        {
+
+            var currentUserId = FirebaseClient.GetCurrentUser().Uid;
+            FirebaseClient.GetDatabaseReference()
+                .Child("Users")
+                .Child(currentUserId)
+                .AddValueEventListener(new MyRetrieveUserEventListener());
+        }
 
     }
 }

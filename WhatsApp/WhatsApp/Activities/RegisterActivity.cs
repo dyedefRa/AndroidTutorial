@@ -80,7 +80,7 @@ namespace WhatsApp.Activities
         private void TaskCompletionListener_Success(object sender, EventArgs e)
         {
 
-            string currentUserId = FirebaseClient.GetCurrentUserId;
+            string currentUserId = FirebaseClient.GetCurrentUser().Uid;
             FirebaseClient.GetDatabaseReference().Child("Users").Child(currentUserId).SetValue("");
 
             SendUserToMainActivity();
