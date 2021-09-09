@@ -106,7 +106,7 @@ namespace WhatsApp.Activities
             FirebaseClient.GetDatabaseReference()
                 .Child("Users")
                 .Child(currentUserId)
-                .AddValueEventListener(new MyRetrieveUserEventListener());
+                .AddValueEventListener(new MyRetrieveUserEventListener(new SettingsActivity()));
         }
 
     }

@@ -25,6 +25,13 @@ public class MyRetrieveUserEventListener
 			mono.android.TypeManager.Activate ("WhatsApp.Helper.MyRetrieveUserEventListener, WhatsApp", "", this, new java.lang.Object[] {  });
 	}
 
+	public MyRetrieveUserEventListener (android.content.Context p0)
+	{
+		super ();
+		if (getClass () == MyRetrieveUserEventListener.class)
+			mono.android.TypeManager.Activate ("WhatsApp.Helper.MyRetrieveUserEventListener, WhatsApp", "Android.Content.Context, Mono.Android", this, new java.lang.Object[] { p0 });
+	}
+
 
 	public void onCancelled (com.google.firebase.database.DatabaseError p0)
 	{

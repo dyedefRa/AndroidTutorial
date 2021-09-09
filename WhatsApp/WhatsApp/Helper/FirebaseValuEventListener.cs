@@ -34,6 +34,5 @@ namespace WhatsApp.Helper
             Cancelled?.Invoke(this, new EventArgs());
         }
 
-     
     }
 }

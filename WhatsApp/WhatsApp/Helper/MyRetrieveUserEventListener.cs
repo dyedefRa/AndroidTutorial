@@ -16,9 +16,21 @@ namespace WhatsApp.Helper
 {
     public class MyRetrieveUserEventListener : Java.Lang.Object, IValueEventListener
     {
+        //https://stackoverflow.com/questions/10996479/how-to-update-a-textview-of-an-activity-from-another-class
+
+        Context context;
         EditText userName;
         EditText userStatus;
         public CircleImageView userProfileImage;
+        public MyRetrieveUserEventListener(Context _context)
+        {
+            context = _context;
+            //_context
+            //userName = ((Activity)context).FindViewById<EditText>(Resource.Id.set_user_name);
+            //userStatus = ((Activity)context).FindViewById<EditText>(Resource.Id.set_profile_status);
+            //userProfileImage = ((Activity)context).FindViewById<CircleImageView>(Resource.Id.set_profile_image);
+        }
+
         public void OnCancelled(DatabaseError error)
         {
             throw new NotImplementedException();
@@ -38,9 +50,9 @@ namespace WhatsApp.Helper
                 .Child("image")
                 .GetValue(true).ToString();
 
-                SettingsActivity settingsActivity = new SettingsActivity();
-                //settingsActivity.userName.Text = retrieveUserName;
-                //settingsActivity.userStatus.Text = retrievesStatus;
+                userName.Text = retrieveUserName;
+                userStatus.Text= retrievesStatus;
+
             }
             else if (snapshot.Exists() && snapshot.HasChild(FirebaseClient.UserExistencePropertyStaticName))
             {
@@ -54,13 +66,7 @@ namespace WhatsApp.Helper
                 .Child("image")?
                 .GetValue(true)?.ToString();
 
-                //BURASI HATALI  
-                SettingsActivity settingsActivity = new SettingsActivity();
-                //settingsActivity.userName.Text = retrieveUserName;
-                //settingsActivity.userStatus.Text = retrievesStatus;
-                userName = settingsActivity.FindViewById<EditText>(Resource.Id.set_user_name);
-                userStatus = settingsActivity.FindViewById<EditText>(Resource.Id.set_profile_status);
-                userProfileImage = settingsActivity.FindViewById<CircleImageView>(Resource.Id.set_profile_image);
+             
                 userName.Text = retrieveUserName;
                 userStatus.Text = retrievesStatus;
             }
