@@ -24,6 +24,7 @@ namespace WhatsApp.Helper
         public CircleImageView userProfileImage;
         public MyRetrieveUserEventListener(Context _context)
         {
+            //BURASI   
             context = _context;
             //_context
             //userName = ((Activity)context).FindViewById<EditText>(Resource.Id.set_user_name);
@@ -66,7 +67,6 @@ namespace WhatsApp.Helper
                 .Child("image")?
                 .GetValue(true)?.ToString();
 
-             
                 userName.Text = retrieveUserName;
                 userStatus.Text = retrievesStatus;
             }

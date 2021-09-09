@@ -3,6 +3,7 @@ using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
+using Android.Widget;
 using AndroidX.AppCompat.App;
 using AndroidX.AppCompat.Widget;
 using AndroidX.ViewPager.Widget;
@@ -21,7 +22,7 @@ namespace WhatsApp
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     { 
-        private Toolbar mToolBar;
+        private AndroidX.AppCompat.Widget.Toolbar mToolBar;
         private ViewPager mViewPager;
         private TabLayout mTabLayout;
         private TabsAccessorAdapter mTabsAccessorAdapter;
@@ -34,7 +35,7 @@ namespace WhatsApp
             SetContentView(Resource.Layout.activity_main);
 
             //NOTE 1
-            mToolBar = FindViewById<Toolbar>(Resource.Id.main_page_toolbar);
+            mToolBar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.main_page_toolbar);
             SetSupportActionBar(mToolBar);
             //ActionBar.SetTitle("");
 
@@ -109,6 +110,10 @@ namespace WhatsApp
             {
 
             }
+            else if (item.ItemId == Resource.Id.main_create_group_option)
+            {
+                RequestNewGroup();
+            }
             return true;
         }
 
@@ -118,6 +123,49 @@ namespace WhatsApp
             settingsIntent.AddFlags(ActivityFlags.NewTask | ActivityFlags.ClearTask);
             StartActivity(settingsIntent);
             Finish();
-        }    
+        }
+
+        EditText groupNameField;
+        private void RequestNewGroup()
+        {
+            Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
+            builder.SetTitle("Enter Group Name :");
+
+
+             groupNameField = new EditText(this);
+            groupNameField.SetHint(Resource.String.hintEx);
+            builder.SetView(groupNameField);
+
+            builder.SetPositiveButton("Create", (senderAlert, args) =>
+            {
+                string groupName = groupNameField.Text;
+
+                if (string.IsNullOrEmpty(groupName))
+                    Toast.MakeText(this, "Please write Group Name", ToastLength.Short)
+                        .Show();
+                else
+                {
+                    CreateNewGroup(groupName);
+                }
+            });
+            builder.SetNegativeButton("Cancel", (senderAlert, args) =>
+            {
+               
+             //CLOSE AYARLA.
+            });
+
+            builder.Show();
+        }
+
+        private void CreateNewGroup(string groupName)
+        {
+            //Task
+            //FirebaseClient.GetDatabaseReference()
+            //   .Child("Groups")
+            //   .Child(groupName)
+            //   .SetValue("")
+            //   .AddOnCompleteListener((s,e)=> { })
+
+        }
     }
 }

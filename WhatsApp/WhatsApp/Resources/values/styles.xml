@@ -11,4 +11,6 @@
 		<item name="actionMenuTextColor">@color/colorMainMenu</item>
     </style>
 
+	<style name="AlertDialog" parent="Base.Theme.AppCompat.Light.Dialog">
+    </style>
 </resources>

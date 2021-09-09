@@ -2,5 +2,8 @@ MyEventlisteri FirebaseValueEventListernera cek.
 
 SORUN optinos_menu de ki menulerin rengi deðiþmedi o yuzden gozukmuyor. Ama fonk calýsýyor.
 
-
+-------------------------------------
 MyRetrieveUserEventListener HATALI ACTIVITYLE USRENMAE ERISILMIYOR:
+https://www.youtube.com/watch?v=CYETYVy57wQ&list=PLxefhmF0pcPmtdoud8f64EpgapkclCllj&index=16&ab_channel=CodingCafe
+https://stackoverflow.com/questions/10996479/how-to-update-a-textview-of-an-activity-from-another-class
+-------------------------------------
