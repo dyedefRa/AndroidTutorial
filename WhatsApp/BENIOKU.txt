@@ -103,8 +103,23 @@ https://console.firebase.google.com/project/whatsapp-81d75/database/whatsapp-81d
 de.hdodenhof.circleimageview 
 
 -------------
+------------------------------------@@@
 FirebaseClient >
     //bu name propertisinden user in usernamýný olusturup oýlsturmadýgýný kontrol edýyoruz .ona göre main yada setting activitye gonderýyoruz
         public static string UserExistencePropertyStaticName = "name";
 
 MyEventListener de de bunu kullanýyoruz.
+
+------------------------------------ 
+
+SettingActivityde
+useri kontrol edýyoruz..
+Eger
+  public static string UserStaticName = "name";
+        public static string UserStaticImageName = "image";
+        public static string UserStaticStatusName = "status";
+        proplarý var sa yoksa durumlarýna gore visible felan muhabelleri yapýyoruz
+------------------------------------ @@@@@@@@@@@
+        Bunun için;
+        SettingActivitydeki AddValueEventListener deðiþiklikleri yakalamak için , IValueEventListener den settingsi miras aldýk.
+        //AddValueEventListener ONCHANGE BURAYA DUSUYOR deðiþiklik onchange dusuyor.

@@ -4,7 +4,8 @@ package crc642fbe8a92180bd497;
 public class MainActivity
 	extends androidx.appcompat.app.AppCompatActivity
 	implements
-		mono.android.IGCUserPeer
+		mono.android.IGCUserPeer,
+		com.google.firebase.database.ValueEventListener
 {
 /** @hide */
 	public static final String __md_methods;
@@ -15,6 +16,8 @@ public class MainActivity
 			"n_onStart:()V:GetOnStartHandler\n" +
 			"n_onCreateOptionsMenu:(Landroid/view/Menu;)Z:GetOnCreateOptionsMenu_Landroid_view_Menu_Handler\n" +
 			"n_onOptionsItemSelected:(Landroid/view/MenuItem;)Z:GetOnOptionsItemSelected_Landroid_view_MenuItem_Handler\n" +
+			"n_onCancelled:(Lcom/google/firebase/database/DatabaseError;)V:GetOnCancelled_Lcom_google_firebase_database_DatabaseError_Handler:Firebase.Database.IValueEventListenerInvoker, Xamarin.Firebase.Database\n" +
+			"n_onDataChange:(Lcom/google/firebase/database/DataSnapshot;)V:GetOnDataChange_Lcom_google_firebase_database_DataSnapshot_Handler:Firebase.Database.IValueEventListenerInvoker, Xamarin.Firebase.Database\n" +
 			"";
 		mono.android.Runtime.register ("WhatsApp.MainActivity, WhatsApp", MainActivity.class, __md_methods);
 	}
@@ -74,6 +77,22 @@ public class MainActivity
 	}
 
 	private native boolean n_onOptionsItemSelected (android.view.MenuItem p0);
+
+
+	public void onCancelled (com.google.firebase.database.DatabaseError p0)
+	{
+		n_onCancelled (p0);
+	}
+
+	private native void n_onCancelled (com.google.firebase.database.DatabaseError p0);
+
+
+	public void onDataChange (com.google.firebase.database.DataSnapshot p0)
+	{
+		n_onDataChange (p0);
+	}
+
+	private native void n_onDataChange (com.google.firebase.database.DataSnapshot p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

@@ -4,13 +4,16 @@ package crc64ee1668752c35d02a;
 public class SettingsActivity
 	extends android.app.Activity
 	implements
-		mono.android.IGCUserPeer
+		mono.android.IGCUserPeer,
+		com.google.firebase.database.ValueEventListener
 {
 /** @hide */
 	public static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
+			"n_onCancelled:(Lcom/google/firebase/database/DatabaseError;)V:GetOnCancelled_Lcom_google_firebase_database_DatabaseError_Handler:Firebase.Database.IValueEventListenerInvoker, Xamarin.Firebase.Database\n" +
+			"n_onDataChange:(Lcom/google/firebase/database/DataSnapshot;)V:GetOnDataChange_Lcom_google_firebase_database_DataSnapshot_Handler:Firebase.Database.IValueEventListenerInvoker, Xamarin.Firebase.Database\n" +
 			"";
 		mono.android.Runtime.register ("WhatsApp.Activities.SettingsActivity, WhatsApp", SettingsActivity.class, __md_methods);
 	}
@@ -30,6 +33,22 @@ public class SettingsActivity
 	}
 
 	private native void n_onCreate (android.os.Bundle p0);
+
+
+	public void onCancelled (com.google.firebase.database.DatabaseError p0)
+	{
+		n_onCancelled (p0);
+	}
+
+	private native void n_onCancelled (com.google.firebase.database.DatabaseError p0);
+
+
+	public void onDataChange (com.google.firebase.database.DataSnapshot p0)
+	{
+		n_onDataChange (p0);
+	}
+
+	private native void n_onDataChange (com.google.firebase.database.DataSnapshot p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

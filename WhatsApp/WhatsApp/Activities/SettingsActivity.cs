@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using DE.Hdodenhof.Circleimageview;
+using Firebase.Database;
 using Java.Util;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ using WhatsApp.Helper;
 namespace WhatsApp.Activities
 {
     [Activity(Label = "SettingsActivity")]
-    public class SettingsActivity : Activity
+    public class SettingsActivity : Activity, IValueEventListener
     {
         private Button updateAccountSettings;
         private EditText userName, userStatus;
@@ -28,6 +29,7 @@ namespace WhatsApp.Activities
             SetContentView(Resource.Layout.settings_activity);
 
             InitializeFields();
+            userName.Visibility = ViewStates.Invisible;
             updateAccountSettings.Click += UpdateAccountSettings_Click;
 
             RetrieveUserInformation();
@@ -63,9 +65,9 @@ namespace WhatsApp.Activities
             {
                 var currentUserId = FirebaseClient.GetCurrentUser().Uid;
                 HashMap profileMap = new HashMap();
-                profileMap.Put("uid", currentUserId);
-                profileMap.Put(FirebaseClient.UserExistencePropertyStaticName, setUserName);
-                profileMap.Put("status", setUserStatus);
+                profileMap.Put(FirebaseClient.UserStaticUID, currentUserId);
+                profileMap.Put(FirebaseClient.UserStaticName, setUserName);
+                profileMap.Put(FirebaseClient.UserStaticStatusName, setUserStatus);
 
                 TaskCompletionListener taskCompletionListener = new TaskCompletionListener();
                 taskCompletionListener.Success += TaskCompletionListener_Success;
@@ -106,8 +108,56 @@ namespace WhatsApp.Activities
             FirebaseClient.GetDatabaseReference()
                 .Child("Users")
                 .Child(currentUserId)
-                .AddValueEventListener(new MyRetrieveUserEventListener(new SettingsActivity()));
+                .AddValueEventListener(this);
         }
 
+        //AddValueEventListener ONCHANGE BURAYA DUSUYOR
+        public void OnDataChange(DataSnapshot snapshot)
+        {
+            if (snapshot.Exists() && snapshot.HasChild(FirebaseClient.UserStaticName) && snapshot.HasChild(FirebaseClient.UserStaticImageName))
+            {
+                string retrieveUserName = snapshot
+                    .Child(FirebaseClient.UserStaticName)
+                    .GetValue(true).ToString();
+                string retrievesStatus = snapshot
+                  .Child(FirebaseClient.UserStaticStatusName)
+                  .GetValue(true).ToString();
+                string retrieveProfileImage = snapshot
+                .Child(FirebaseClient.UserStaticImageName)
+                .GetValue(true).ToString();
+
+                userName.Text = retrieveUserName;
+                userStatus.Text = retrievesStatus;
+
+            }
+            else if (snapshot.Exists() && snapshot.HasChild(FirebaseClient.UserStaticName))
+            {
+                string retrieveUserName = snapshot
+                    .Child(FirebaseClient.UserStaticName)
+                    .GetValue(true).ToString();
+                string retrievesStatus = snapshot
+                  .Child(FirebaseClient.UserStaticStatusName)
+                  .GetValue(true).ToString();
+                string retrieveProfileImage = snapshot
+                .Child(FirebaseClient.UserStaticImageName)?
+                .GetValue(true)?.ToString();
+
+                userName.Text = retrieveUserName;
+                userStatus.Text = retrievesStatus;
+            }
+            else
+            {
+                userName.Visibility = ViewStates.Visible;
+                Toast.MakeText(Application.Context, "Please Set/Update Your Profile Information...", ToastLength.Short)
+                    .Show();
+            }
+        }
+
+        public void OnCancelled(DatabaseError error)
+        {
+            throw new NotImplementedException();
+        }
+
+      
     }
 }

@@ -20,8 +20,8 @@ using WhatsApp.Models;
 namespace WhatsApp
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity
-    { 
+    public class MainActivity : AppCompatActivity, IValueEventListener
+    {
         private AndroidX.AppCompat.Widget.Toolbar mToolBar;
         private ViewPager mViewPager;
         private TabLayout mTabLayout;
@@ -75,12 +75,26 @@ namespace WhatsApp
         {
             string currentUserId = FirebaseClient.GetCurrentUser().Uid;
 
-            //Eğer user null degilse name propertisine bak. (MyEventListener da var)
+            //Eğer user null degilse name propertisine bak. OnDataChange
             //Eger name prop null degılse Welcome yaz degılse Setting sayfasına yonlendır.
-         
-            FirebaseClient.GetDatabaseReference().Child("Users").Child(currentUserId).AddValueEventListener(new MyEventListener());
+
+            FirebaseClient.GetDatabaseReference().Child("Users").Child(currentUserId).AddValueEventListener(this);
         }
- 
+        //AddValueEventListener
+        public void OnCancelled(DatabaseError error)
+        {
+            throw new NotImplementedException();
+        }
+        //AddValueEventListener
+        public void OnDataChange(DataSnapshot snapshot)
+        {
+            if (snapshot.Child("name").Exists())
+                Toast.MakeText(Application.Context, "Welcome", ToastLength.Short)
+                    .Show();
+            else
+                SendUserToSettingsActivity();
+        }
+
         private void SendUserToLoginActivity()
         {
             Intent loginIntent = new Intent(this, typeof(LoginActivity));
@@ -97,21 +111,22 @@ namespace WhatsApp
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            if (item.ItemId == Resource.Id.main_logout_option)
+            if (item.ItemId == Resource.Id.main_logout_option)//4
             {
                 FirebaseClient.GetFirebaseAuth().SignOut();
                 SendUserToLoginActivity();
             }
-            else if (item.ItemId == Resource.Id.main_settings_option)
+            else if (item.ItemId == Resource.Id.main_settings_option)//3
             {
                 SendUserToSettingsActivity();
             }
-            else if (item.ItemId == Resource.Id.main_find_friends_option)
+            else if (item.ItemId == Resource.Id.main_find_friends_option)//1
             {
 
             }
-            else if (item.ItemId == Resource.Id.main_create_group_option)
+            else if (item.ItemId == Resource.Id.main_create_group_option)//2
             {
+                //Burada dialog cıkardık.
                 RequestNewGroup();
             }
             return true;
@@ -126,19 +141,20 @@ namespace WhatsApp
         }
 
         EditText groupNameField;
+        string groupName;
         private void RequestNewGroup()
         {
             Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
             builder.SetTitle("Enter Group Name :");
 
 
-             groupNameField = new EditText(this);
+            groupNameField = new EditText(this);
             groupNameField.SetHint(Resource.String.hintEx);
             builder.SetView(groupNameField);
 
             builder.SetPositiveButton("Create", (senderAlert, args) =>
             {
-                string groupName = groupNameField.Text;
+                groupName = groupNameField.Text;
 
                 if (string.IsNullOrEmpty(groupName))
                     Toast.MakeText(this, "Please write Group Name", ToastLength.Short)
@@ -150,22 +166,31 @@ namespace WhatsApp
             });
             builder.SetNegativeButton("Cancel", (senderAlert, args) =>
             {
-               
-             //CLOSE AYARLA.
+
+                //CLOSE AYARLA.
             });
 
             builder.Show();
         }
 
+        //Burada yenı group chıledı olusturuk!!!
         private void CreateNewGroup(string groupName)
         {
-            //Task
-            //FirebaseClient.GetDatabaseReference()
-            //   .Child("Groups")
-            //   .Child(groupName)
-            //   .SetValue("")
-            //   .AddOnCompleteListener((s,e)=> { })
+            TaskCompletionListener taskCompletionListener = new TaskCompletionListener();
+            taskCompletionListener.Complete += TaskCompletionListener_Complete;
 
+            FirebaseClient.GetDatabaseReference()
+               .Child("Groups")
+               .Child(groupName)
+               .SetValue("")
+               .AddOnCompleteListener(taskCompletionListener);
+
+        }
+
+        private void TaskCompletionListener_Complete(object sender, EventArgs e)
+        {
+            Toast.MakeText(this, groupName + " group is Created Successfully...", ToastLength.Short)
+                            .Show();
         }
     }
 }

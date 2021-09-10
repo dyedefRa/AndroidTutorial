@@ -12,10 +12,16 @@ using System.Text;
 
 namespace WhatsApp.Helper
 {
-    public class TaskCompletionListener : Java.Lang.Object, IOnSuccessListener, IOnFailureListener
+    public class TaskCompletionListener : Java.Lang.Object, IOnSuccessListener, IOnFailureListener,IOnCompleteListener
     {
         public event EventHandler Success;
         public event EventHandler Failure;
+        public event EventHandler Complete;
+
+        public void OnComplete(Task task)
+        {
+            Complete?.Invoke(this, new EventArgs());
+        }
 
         public void OnFailure(Java.Lang.Exception e)
         {
@@ -26,5 +32,6 @@ namespace WhatsApp.Helper
         {
             Success?.Invoke(this, new EventArgs());
         }
+
     }
 }
