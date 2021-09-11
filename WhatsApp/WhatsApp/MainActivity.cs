@@ -189,7 +189,7 @@ namespace WhatsApp
 
         private void TaskCompletionListener_Complete(object sender, EventArgs e)
         {
-            Toast.MakeText(this, groupName + " group is Created Successfully...", ToastLength.Short)
+            Toast.MakeText(this, groupName + " group is Created Successfully... ", ToastLength.Short)
                             .Show();
         }
     }
