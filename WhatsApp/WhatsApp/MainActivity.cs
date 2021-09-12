@@ -144,6 +144,7 @@ namespace WhatsApp
         string groupName;
         private void RequestNewGroup()
         {
+            //Dialog Alert
             Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
             builder.SetTitle("Enter Group Name :");
 
@@ -180,7 +181,7 @@ namespace WhatsApp
             taskCompletionListener.Complete += TaskCompletionListener_Complete;
 
             FirebaseClient.GetDatabaseReference()
-               .Child("Groups")
+               .Child(FirebaseClient.GroupStaticName) //Gruops
                .Child(groupName)
                .SetValue("")
                .AddOnCompleteListener(taskCompletionListener);

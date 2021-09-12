@@ -27,6 +27,7 @@ ImageView;obj\Debug\110\res\layout\register_activity.xml
 include;obj\Debug\110\res\layout\activity_main.xml
 item;obj\Debug\110\res\drawable\options_menu.xml
 item;obj\Debug\110\res\values\styles.xml
+ListView;obj\Debug\110\res\layout\fragment_group.xml
 menu;obj\Debug\110\res\drawable\options_menu.xml
 paths;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\41\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 RelativeLayout;obj\Debug\110\res\layout\activity_main.xml

@@ -23,6 +23,7 @@ namespace WhatsApp.Helper
         public static string UserStaticName = "name";
         public static string UserStaticImageName = "image";
         public static string UserStaticStatusName = "status";
+        public static string GroupStaticName = "Groups";
         //Create User Login Logout methodları. Auth methodları yanı
         public static FirebaseAuth GetFirebaseAuth()
         {
