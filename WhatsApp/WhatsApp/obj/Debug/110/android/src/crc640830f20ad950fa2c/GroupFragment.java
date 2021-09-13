@@ -5,7 +5,8 @@ public class GroupFragment
 	extends androidx.fragment.app.Fragment
 	implements
 		mono.android.IGCUserPeer,
-		com.google.firebase.database.ValueEventListener
+		com.google.firebase.database.ValueEventListener,
+		android.widget.AdapterView.OnItemClickListener
 {
 /** @hide */
 	public static final String __md_methods;
@@ -15,6 +16,7 @@ public class GroupFragment
 			"n_onCreateView:(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;:GetOnCreateView_Landroid_view_LayoutInflater_Landroid_view_ViewGroup_Landroid_os_Bundle_Handler\n" +
 			"n_onCancelled:(Lcom/google/firebase/database/DatabaseError;)V:GetOnCancelled_Lcom_google_firebase_database_DatabaseError_Handler:Firebase.Database.IValueEventListenerInvoker, Xamarin.Firebase.Database\n" +
 			"n_onDataChange:(Lcom/google/firebase/database/DataSnapshot;)V:GetOnDataChange_Lcom_google_firebase_database_DataSnapshot_Handler:Firebase.Database.IValueEventListenerInvoker, Xamarin.Firebase.Database\n" +
+			"n_onItemClick:(Landroid/widget/AdapterView;Landroid/view/View;IJ)V:GetOnItemClick_Landroid_widget_AdapterView_Landroid_view_View_IJHandler:Android.Widget.AdapterView/IOnItemClickListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"";
 		mono.android.Runtime.register ("WhatsApp.Fragments.GroupFragment, WhatsApp", GroupFragment.class, __md_methods);
 	}
@@ -66,6 +68,14 @@ public class GroupFragment
 	}
 
 	private native void n_onDataChange (com.google.firebase.database.DataSnapshot p0);
+
+
+	public void onItemClick (android.widget.AdapterView p0, android.view.View p1, int p2, long p3)
+	{
+		n_onItemClick (p0, p1, p2, p3);
+	}
+
+	private native void n_onItemClick (android.widget.AdapterView p0, android.view.View p1, int p2, long p3);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

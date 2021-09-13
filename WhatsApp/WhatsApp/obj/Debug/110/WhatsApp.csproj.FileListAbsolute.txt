@@ -430,3 +430,6 @@ D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\android\src\de\hdodenhof\circleim
 D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\android\src\crc646d4d0d07ce40ce84\MyEventListener.java
 D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\android\src\crc646d4d0d07ce40ce84\FirebaseValuEventListener.java
 D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\android\src\crc646d4d0d07ce40ce84\MyRetrieveUserEventListener.java
+D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\res\layout\group_chat_activity.xml
+D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\res\drawable\send_message.png
+D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\android\src\crc64ee1668752c35d02a\GroupChatActivity.java

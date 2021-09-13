@@ -17,6 +17,7 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity android:name="crc64ee1668752c35d02a.GroupChatActivity" android:label="GroupChatActivity" />
     <activity android:name="crc64ee1668752c35d02a.LoginActivity" android:label="LoginActivity" />
     <activity android:name="crc64ee1668752c35d02a.RegisterActivity" android:label="RegisterActivity" />
     <activity android:name="crc64ee1668752c35d02a.SettingsActivity" android:label="SettingsActivity" />
