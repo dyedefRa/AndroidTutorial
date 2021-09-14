@@ -74,7 +74,7 @@ namespace WhatsApp.Activities
                 taskCompletionListener.Failure += TaskCompletionListener_Failure;
 
                 FirebaseClient.GetDatabaseReference()
-                    .Child("Users")
+                    .Child(FirebaseClient.UsersChildStaticName)
                     .Child(currentUserId)
                     .SetValue(profileMap)
                     .AddOnSuccessListener(taskCompletionListener)
@@ -106,7 +106,7 @@ namespace WhatsApp.Activities
 
             var currentUserId = FirebaseClient.GetCurrentUser().Uid;
             FirebaseClient.GetDatabaseReference()
-                .Child("Users")
+                .Child(FirebaseClient.UsersChildStaticName)
                 .Child(currentUserId)
                 .AddValueEventListener(this);
         }

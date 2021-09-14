@@ -78,7 +78,10 @@ namespace WhatsApp
             //Eğer user null degilse name propertisine bak. OnDataChange
             //Eger name prop null degılse Welcome yaz degılse Setting sayfasına yonlendır.
 
-            FirebaseClient.GetDatabaseReference().Child("Users").Child(currentUserId).AddValueEventListener(this);
+            FirebaseClient.GetDatabaseReference()
+                .Child(FirebaseClient.UsersChildStaticName)
+                .Child(currentUserId)
+                .AddValueEventListener(this);
         }
         //AddValueEventListener
         public void OnCancelled(DatabaseError error)
@@ -181,7 +184,7 @@ namespace WhatsApp
             taskCompletionListener.Complete += TaskCompletionListener_Complete;
 
             FirebaseClient.GetDatabaseReference()
-               .Child(FirebaseClient.GroupStaticName) //Gruops
+               .Child(FirebaseClient.GroupChildStaticName) //Gruops
                .Child(groupName)
                .SetValue("")
                .AddOnCompleteListener(taskCompletionListener);

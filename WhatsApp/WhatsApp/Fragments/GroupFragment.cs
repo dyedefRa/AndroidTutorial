@@ -33,7 +33,7 @@ namespace WhatsApp.Fragments
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             groupFragmentView = inflater.Inflate(Resource.Layout.fragment_group, container, false);
-            groupRef = FirebaseClient.GetDatabaseReference().Child(FirebaseClient.GroupStaticName);
+            groupRef = FirebaseClient.GetDatabaseReference().Child(FirebaseClient.GroupChildStaticName);
 
             InitializeFields();
 

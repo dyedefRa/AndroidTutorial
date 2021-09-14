@@ -81,7 +81,7 @@ namespace WhatsApp.Activities
         {
 
             string currentUserId = FirebaseClient.GetCurrentUser().Uid;
-            FirebaseClient.GetDatabaseReference().Child("Users").Child(currentUserId).SetValue("");
+            FirebaseClient.GetDatabaseReference().Child(FirebaseClient.UsersChildStaticName).Child(currentUserId).SetValue("");
 
             SendUserToMainActivity();
             Toast.MakeText(this, "Account Created Successfully", ToastLength.Short).Show();
