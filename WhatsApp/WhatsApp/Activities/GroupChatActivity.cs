@@ -16,7 +16,7 @@ using static Android.Views.View;
 namespace WhatsApp.Activities
 {
     [Activity(Label = "GroupChatActivity")]
-    public class GroupChatActivity : AppCompatActivity, IValueEventListener, IOnClickListener
+    public class GroupChatActivity : AppCompatActivity, IValueEventListener, IOnClickListener, IChildEventListener
     {
         private AndroidX.AppCompat.Widget.Toolbar mToolBar;
         private ImageButton sendMessageButton;
@@ -33,6 +33,8 @@ namespace WhatsApp.Activities
         {
             base.OnCreate(savedInstanceState);
 
+    
+
             SetContentView(Resource.Layout.group_chat_activity);
             //GroupFragment > listview.   OnItemClick Den gelıyor.
             currentGroupName = Intent.GetStringExtra("groupName");
@@ -45,6 +47,8 @@ namespace WhatsApp.Activities
             groupNameRef = FirebaseClient.GetDatabaseReference().Child(FirebaseClient.GroupChildStaticName)
                 .Child(currentGroupName); //Groups > currentGroup
 
+        
+
             InitializeFields();
 
             GetUserInfo();
@@ -52,6 +56,14 @@ namespace WhatsApp.Activities
             sendMessageButton.SetOnClickListener(this);
         }
 
+        protected override void OnStart()
+        {
+            base.OnStart();
+
+            //AÇıldığında mesajlar otomatik gelsin.
+            groupNameRef.AddChildEventListener(this);
+            //IChildEventListener den miras aldık.
+        }
         private void InitializeFields()
         {
             mToolBar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.group_chat_bar_layout);
@@ -90,6 +102,7 @@ namespace WhatsApp.Activities
             SaveMessageInfoToDatabase();
 
             userMessageInput.Text = "";
+
         }
 
         private void SaveMessageInfoToDatabase()
@@ -117,6 +130,48 @@ namespace WhatsApp.Activities
 
                 groupMessageKeyRef.UpdateChildren(messageInfoMap);
             }
+        }
+
+        public void OnChildAdded(DataSnapshot snapshot, string previousChildName)
+        {
+            //SAYFA AÇILDIĞINDA OTOMATIK OLARAK MESAJLARI GETIRIR!.
+            if (snapshot.Exists())
+            {
+                DisplayMessages(snapshot);
+            }
+        }
+
+        private void DisplayMessages(DataSnapshot snapshot)
+        {
+            //SAYFA AÇILDIĞINDA OTOMATIK OLARAK MESAJLARI GETIRIR!.
+
+            var iterator = snapshot.Children.Iterator();
+
+            while (iterator.HasNext)
+            {
+                string chatDate = ((DataSnapshot)iterator.Next()).GetValue(true).ToString();
+                string chatMessage = ((DataSnapshot)iterator.Next()).GetValue(true).ToString();
+                string chatName = ((DataSnapshot)iterator.Next()).GetValue(true).ToString();
+                string chatTime = ((DataSnapshot)iterator.Next()).GetValue(true).ToString();
+
+                displayTextMessage.Append(chatName + " :\n" + chatMessage + " \n" + chatTime + "  " + chatDate + " \n \n" );
+            }
+     
+        }
+
+        public void OnChildChanged(DataSnapshot snapshot, string previousChildName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnChildMoved(DataSnapshot snapshot, string previousChildName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnChildRemoved(DataSnapshot snapshot)
+        {
+            throw new NotImplementedException();
         }
     }
 }

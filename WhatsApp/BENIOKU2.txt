@@ -4,6 +4,7 @@ groupRef.AddValueEventListener(this);
   //A2
       listView.OnItemClickListener = this;
 
+
       metodlarýna ýyý bak.
 --------------------------------------
 IMAGE BUTTONA CLIKLISTENER EKLEMEK ! (GroupChatActivity de)
@@ -21,3 +22,6 @@ bunu override edýyor.
 ----------------------------------- (GroupChatActivity)
  //Yeni key elde etme
             string messageKey = groupNameRef.Push().Key;
+
+
+
