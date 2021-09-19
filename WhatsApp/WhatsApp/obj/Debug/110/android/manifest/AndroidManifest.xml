@@ -19,6 +19,7 @@
     </activity>
     <activity android:name="crc64ee1668752c35d02a.GroupChatActivity" android:label="GroupChatActivity" />
     <activity android:name="crc64ee1668752c35d02a.LoginActivity" android:label="LoginActivity" />
+    <activity android:name="crc64ee1668752c35d02a.PhoneLoginActivity" android:label="PhoneLoginActivity" />
     <activity android:name="crc64ee1668752c35d02a.RegisterActivity" android:label="RegisterActivity" />
     <activity android:name="crc64ee1668752c35d02a.SettingsActivity" android:label="SettingsActivity" />
     <service android:name="crc64396a3fe5f8138e3f.KeepAliveService" />

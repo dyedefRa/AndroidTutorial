@@ -21,6 +21,7 @@ namespace WhatsApp.Activities
         private AndroidX.AppCompat.Widget.Toolbar mToolBar;
         private ImageButton sendMessageButton;
         private EditText userMessageInput;
+        //mesaj geldikçe otomatik en alta scroll yapsın dıye eklemısız.
         private ScrollView mScrollView;
         private TextView displayTextMessage;
         private DatabaseReference userRef, groupNameRef, groupMessageKeyRef;
@@ -154,7 +155,9 @@ namespace WhatsApp.Activities
                 string chatName = ((DataSnapshot)iterator.Next()).GetValue(true).ToString();
                 string chatTime = ((DataSnapshot)iterator.Next()).GetValue(true).ToString();
 
-                displayTextMessage.Append(chatName + " :\n" + chatMessage + " \n" + chatTime + "  " + chatDate + " \n \n" );
+                displayTextMessage.Append(chatName + " :\n" + chatMessage + " \n" + chatTime + "  " + chatDate + " \n\n");
+
+                mScrollView.FullScroll(FocusSearchDirection.Down);
             }
      
         }

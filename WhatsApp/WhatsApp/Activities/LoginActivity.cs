@@ -31,6 +31,13 @@ namespace WhatsApp.Activities
 
             txtNeedNewAccountLink.Click += TxtNeedNewAccountLink_Click;
             btnLogin.Click += BtnLogin_Click;
+            btnPhoneLogin.Click += BtnPhoneLogin_Click;
+        }
+
+        private void BtnPhoneLogin_Click(object sender, EventArgs e)
+        {
+            Intent phoneLoginIntent = new Intent(this,typeof(PhoneLoginActivity));
+            StartActivity(phoneLoginIntent);
         }
 
         private void InitializeFields()

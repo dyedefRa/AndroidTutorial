@@ -120,20 +120,20 @@ public final class R {
 		public static final int notification_background = 0x7f08014c;
 		public static final int notification_main_column = 0x7f08014d;
 		public static final int notification_main_column_container = 0x7f08014e;
-		public static final int right_icon = 0x7f08016f;
-		public static final int right_side = 0x7f080170;
-		public static final int tag_accessibility_actions = 0x7f0801b5;
-		public static final int tag_accessibility_clickable_spans = 0x7f0801b6;
-		public static final int tag_accessibility_heading = 0x7f0801b7;
-		public static final int tag_accessibility_pane_title = 0x7f0801b8;
-		public static final int tag_screen_reader_focusable = 0x7f0801bc;
-		public static final int tag_transition_group = 0x7f0801be;
-		public static final int tag_unhandled_key_event_manager = 0x7f0801bf;
-		public static final int tag_unhandled_key_listeners = 0x7f0801c0;
-		public static final int text = 0x7f0801c6;
-		public static final int text2 = 0x7f0801c7;
-		public static final int time = 0x7f0801d6;
-		public static final int title = 0x7f0801d7;
+		public static final int right_icon = 0x7f080170;
+		public static final int right_side = 0x7f080171;
+		public static final int tag_accessibility_actions = 0x7f0801b7;
+		public static final int tag_accessibility_clickable_spans = 0x7f0801b8;
+		public static final int tag_accessibility_heading = 0x7f0801b9;
+		public static final int tag_accessibility_pane_title = 0x7f0801ba;
+		public static final int tag_screen_reader_focusable = 0x7f0801be;
+		public static final int tag_transition_group = 0x7f0801c0;
+		public static final int tag_unhandled_key_event_manager = 0x7f0801c1;
+		public static final int tag_unhandled_key_listeners = 0x7f0801c2;
+		public static final int text = 0x7f0801c8;
+		public static final int text2 = 0x7f0801c9;
+		public static final int time = 0x7f0801d8;
+		public static final int title = 0x7f0801d9;
 	}
 	public static final class integer {
 		public static final int status_bar_notification_info_maxnum = 0x7f09001c;

@@ -20,7 +20,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
             <TextView
                 android:id="@+id/group_chat_text_display"
                 android:layout_width="match_parent"
@@ -31,7 +30,7 @@
                 android:textColor="@android:color/background_dark"
                 android:layout_marginStart="2dp"
                 android:layout_marginEnd="2dp"
-                android:layout_marginBottom="50dp"/>
+                android:layout_marginBottom="60dp"/>
 
         </LinearLayout>
     </ScrollView>

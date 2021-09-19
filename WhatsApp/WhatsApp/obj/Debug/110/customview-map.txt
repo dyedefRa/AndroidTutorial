@@ -6,6 +6,7 @@ attr;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\0\jl\res\values\values.xm
 background;obj\Debug\110\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\110\res\mipmap-anydpi-v26\ic_launcher_round.xml
 Button;obj\Debug\110\res\layout\login_activity.xml
+Button;obj\Debug\110\res\layout\phone_login_activity.xml
 Button;obj\Debug\110\res\layout\register_activity.xml
 Button;obj\Debug\110\res\layout\settings_activity.xml
 cache-path;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\41\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
@@ -17,6 +18,7 @@ de.hdodenhof.circleimageview.CircleImageView;obj\Debug\110\res\layout\settings_a
 declare-styleable;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\0\jl\res\values\values.xml
 EditText;obj\Debug\110\res\layout\group_chat_activity.xml
 EditText;obj\Debug\110\res\layout\login_activity.xml
+EditText;obj\Debug\110\res\layout\phone_login_activity.xml
 EditText;obj\Debug\110\res\layout\register_activity.xml
 EditText;obj\Debug\110\res\layout\settings_activity.xml
 external-cache-path;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\41\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
@@ -31,6 +33,7 @@ include;obj\Debug\110\res\layout\group_chat_activity.xml
 item;obj\Debug\110\res\drawable\options_menu.xml
 item;obj\Debug\110\res\values\styles.xml
 LinearLayout;obj\Debug\110\res\layout\group_chat_activity.xml
+LinearLayout;obj\Debug\110\res\layout\phone_login_activity.xml
 ListView;obj\Debug\110\res\layout\fragment_group.xml
 menu;obj\Debug\110\res\drawable\options_menu.xml
 paths;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\41\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
@@ -40,6 +43,7 @@ RelativeLayout;obj\Debug\110\res\layout\fragment_contact.xml
 RelativeLayout;obj\Debug\110\res\layout\fragment_group.xml
 RelativeLayout;obj\Debug\110\res\layout\group_chat_activity.xml
 RelativeLayout;obj\Debug\110\res\layout\login_activity.xml
+RelativeLayout;obj\Debug\110\res\layout\phone_login_activity.xml
 RelativeLayout;obj\Debug\110\res\layout\register_activity.xml
 RelativeLayout;obj\Debug\110\res\layout\settings_activity.xml
 resources;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\0\jl\res\values\values.xml
