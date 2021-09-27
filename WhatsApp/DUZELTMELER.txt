@@ -7,3 +7,7 @@ SORUN optinos_menu de ki menulerin rengi deðiþmedi o yuzden gozukmuyor. Ama fonk
 Groupchatactivity    
 //BURASI GRUP ISMI OLACKA
             SupportActionBar.SetTitle(Resource.String.groupName);
+
+-----------------------------------------------
+SORUN ! PHONE LOGINDE SORUJN VAR.
+https://www.youtube.com/watch?v=o6rpBldK7vM&list=PLxefhmF0pcPmtdoud8f64EpgapkclCllj&index=26&ab_channel=CodingCafe

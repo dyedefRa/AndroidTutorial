@@ -19,11 +19,17 @@ namespace WhatsApp.Activities
     [Activity(Label = "PhoneLoginActivity")]
     public class PhoneLoginActivity : Activity, IOnClickListener
     {
-        private Button sendVerificiationCodeButton, verifyButton;
-        private EditText inputPhoneNumber, inputVerificationCode;
+        public Button sendVerificiationCodeButton, verifyButton;
+        public EditText inputPhoneNumber, inputVerificationCode;
+        public ProgressDialog loadingBar;
+
+        private string mVerificationId;
+        private PhoneAuthProvider.ForceResendingToken mResendToken;
 
 
+        //BURADA HATA VAR 
 
+        //https://www.youtube.com/watch?v=o6rpBldK7vM&list=PLxefhmF0pcPmtdoud8f64EpgapkclCllj&index=26&ab_channel=CodingCafe
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -34,29 +40,55 @@ namespace WhatsApp.Activities
             verifyButton = FindViewById<Button>(Resource.Id.verify_button);
             inputPhoneNumber = FindViewById<EditText>(Resource.Id.phone_number_input);
             inputVerificationCode = FindViewById<EditText>(Resource.Id.verification_code_input);
-
+            loadingBar = new ProgressDialog(this);
             sendVerificiationCodeButton.SetOnClickListener(this); // => OnClick
+
+            verifyButton.Click += VerifyButton_Click;
+
         }
 
-        private string mVerificationId;
-        private PhoneAuthProvider.ForceResendingToken mResendToken;
-
-        public void OnClick(View v)
+        private void VerifyButton_Click(object sender, EventArgs e)
         {
-            //sendVerificiationCodeButton.Visibility = ViewStates.Invisible;
-            //inputPhoneNumber.Visibility = ViewStates.Invisible;
-            //verifyButton.Visibility = ViewStates.Visible;
-            //inputVerificationCode.Visibility = ViewStates.Visible;
+            sendVerificiationCodeButton.Visibility = ViewStates.Invisible;
+            inputPhoneNumber.Visibility = ViewStates.Invisible;
 
-            string phoneNumber = inputPhoneNumber.Text;
-            if (string.IsNullOrEmpty(phoneNumber))
+            string verificationCode = inputVerificationCode.Text;
+
+            if (string.IsNullOrEmpty(verificationCode))
             {
-                Toast.MakeText(this, "Phone number is required", ToastLength.Short)
+                Toast.MakeText(this, "Please write verification code first...", ToastLength.Short)
                     .Show();
             }
             else
             {
+                loadingBar.SetTitle("Code Verification");
+                loadingBar.SetMessage("Please wait , while we are verifying verification code...");
+                loadingBar.SetCanceledOnTouchOutside(false);
+                loadingBar.Show();
+                PhoneAuthCredential credential = PhoneAuthProvider.GetCredential(mVerificationId, verificationCode);
+                //PhoneAuthCallbackss sgag = new PhoneAuthCallbackss();
+                PhoneAuthCallbacks sgag = new PhoneAuthCallbacks(this);
 
+                sgag.signInWithPhoneAuthCredential(credential);
+            }
+        }
+
+
+        public void OnClick(View v)
+        {
+            sendVerificiationCodeButton.Visibility = ViewStates.Invisible;
+            inputPhoneNumber.Visibility = ViewStates.Invisible;
+            verifyButton.Visibility = ViewStates.Visible;
+            inputVerificationCode.Visibility = ViewStates.Visible;
+
+            string phoneNumber = inputPhoneNumber.Text;
+            if (string.IsNullOrEmpty(phoneNumber))
+            {
+                Toast.MakeText(this, "Please enter your phone number first", ToastLength.Short)
+                    .Show();
+            }
+            else
+            {
 
 
                 var timeout = new Java.Lang.Long(60L);
@@ -64,68 +96,61 @@ namespace WhatsApp.Activities
                     .SetPhoneNumber(phoneNumber)
                     .SetTimeout(timeout, Java.Util.Concurrent.TimeUnit.Seconds)
                     .SetActivity(this)
-                    .SetCallbacks(new PhoneAuthCallbacks())
+                    .SetCallbacks(new PhoneAuthCallbacks(this))
                     .Build();
 
                 PhoneAuthProvider.VerifyPhoneNumber(options);
 
-                //PhoneAuthProvider.GetInstance(FirebaseClient.GetFirebaseAuth())
-                //    .VerifyPhoneNumber(
-                //    phoneNumber,
-                //    60,
-                //    Java.Util.Concurrent.TimeUnit.Seconds,
-                //    this,
-                //    callbacks)
-
             }
 
-
         }
 
-
-
-        private void signInWithPhoneAuthCredential(PhoneAuthCredential credential)
+        public void SendUserToMainActivity()
         {
-
-            TaskCompletionListener taskCompletionListener = new TaskCompletionListener();
-            taskCompletionListener.Complete += TaskCompletionListener_Complete;
-
-            FirebaseClient.GetFirebaseAuth().SignInWithCredential(credential)
-                .AddOnCompleteListener(taskCompletionListener);
-
-
+            Intent mainIntent = new Intent(this, typeof(MainActivity));
+            StartActivity(mainIntent);
+            Finish();
         }
 
-        private void TaskCompletionListener_Complete(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-
-        //public class PhoneAuthCallbacks : PhoneAuthProvider.OnVerificationStateChangedCallbacks, View.IOnClickListener
+        //public class PhoneAuthCallbackss : PhoneAuthProvider.OnVerificationStateChangedCallbacks
         //{
+        //    private string mVerificationId;
+        //    private PhoneAuthProvider.ForceResendingToken mResendToken;
 
-        //    public override void OnVerificationCompleted(PhoneAuthCredential credential)
+        //    public override void OnVerificationCompleted(PhoneAuthCredential p0)
         //    {
-        //        signInWithPhoneAuthCredential(credential);
-        //    }
-
-        //    public override void OnCodeSent(string verificationId, PhoneAuthProvider.ForceResendingToken forceResendingToken)
-        //    {
-        //        // The SMS verification code has been sent to the provided phone number, we
-        //        // now need to ask the user to enter the code and then construct a credential
-        //        // by combining the code with a verification ID.
-        //        //base.OnCodeSent(verificationId, forceResendingToken);
-
+        //        signInWithPhoneAuthCredential(p0);
         //    }
 
         //    public override void OnVerificationFailed(FirebaseException p0)
         //    {
-        //        Toast.MakeText(this, "Invalid Phone Number , Please enter correct phone number with yout country code", ToastLength.Short)
-        //          .Show();
+        //        Toast.MakeText(new PhoneLoginActivity(), "Invalid Phone Number , Please enter correct phone number with yout country code", ToastLength.Short)
+        //             .Show();
         //    }
 
-        //    public void OnClick(View v)
+        //    public override void OnCodeSent(string p0, PhoneAuthProvider.ForceResendingToken p1)
+        //    {
+        //        mVerificationId = p0;
+        //        mResendToken = p1;
+        //        PhoneLoginActivity phoneLoginActivity = new PhoneLoginActivity();
+        //        phoneLoginActivity.sendVerificiationCodeButton.Visibility = ViewStates.Invisible;
+        //        //sendVerificiationCodeButton.Visibility = ViewStates.Invisible;
+        //        Toast.MakeText(new PhoneLoginActivity(), "Code has been sent", ToastLength.Short)
+        //           .Show();
+
+        //        base.OnCodeSent(p0, p1);
+        //    }
+
+        //    public void signInWithPhoneAuthCredential(PhoneAuthCredential credential)
+        //    {
+        //        TaskCompletionListener taskCompletionListener = new TaskCompletionListener();
+        //        taskCompletionListener.Complete += TaskCompletionListener_Complete;
+
+        //        FirebaseClient.GetFirebaseAuth().SignInWithCredential(credential)
+        //            .AddOnCompleteListener(taskCompletionListener);
+        //    }
+
+        //    private void TaskCompletionListener_Complete(object sender, EventArgs e)
         //    {
         //        throw new NotImplementedException();
         //    }
