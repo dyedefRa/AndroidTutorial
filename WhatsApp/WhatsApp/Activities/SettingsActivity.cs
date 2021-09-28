@@ -4,6 +4,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Com.Theartofdev.Edmodo.Cropper;
 using DE.Hdodenhof.Circleimageview;
 using Firebase.Database;
 using Java.Util;
@@ -22,6 +23,8 @@ namespace WhatsApp.Activities
         private EditText userName, userStatus;
         private CircleImageView userProfileImage;
 
+        private const int GalleryPick = 1;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -33,7 +36,11 @@ namespace WhatsApp.Activities
             updateAccountSettings.Click += UpdateAccountSettings_Click;
 
             RetrieveUserInformation();
+
+            userProfileImage.Click += UserProfileImage_Click;
         }
+
+
 
         private void InitializeFields()
         {
@@ -91,6 +98,38 @@ namespace WhatsApp.Activities
         private void TaskCompletionListener_Failure(object sender, EventArgs e)
         {
             Toast.MakeText(this, "ERROR !", ToastLength.Short);
+        }
+
+        private void UserProfileImage_Click(object sender, EventArgs e)
+        {
+            Intent galleryIntent = new Intent();
+            galleryIntent.SetAction(Intent.ActionGetContent);
+            galleryIntent.SetType("image/*");
+            StartActivityForResult(galleryIntent, GalleryPick); //1     
+        }
+
+        protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+
+            if (requestCode == GalleryPick && resultCode == Result.Ok && data != null)
+            {
+                var imagerUri = data.Data;
+                //CropImage.Activity()
+                //    .SetGuidelines(CropImageView.Guidelines.On)
+                //    .SetAspectRatio(1, 1)
+                //    .Start(this);
+
+                CropImage.Activity(imagerUri)
+                    .SetGuidelines(CropImageView.Guidelines.On)
+                    .SetAspectRatio(1, 1)
+                    .Start(this);
+            }
+            if (requestCode == CropImage.CropImageActivityRequestCode)
+            {
+                CropImage.ActivityResult result = CropImage.GetActivityResult(data);
+            }
+
         }
 
         private void SendUserToMainActivity()
@@ -158,6 +197,6 @@ namespace WhatsApp.Activities
             throw new NotImplementedException();
         }
 
-      
+
     }
 }

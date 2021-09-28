@@ -23,5 +23,53 @@ bunu override edýyor.
  //Yeni key elde etme
             string messageKey = groupNameRef.Push().Key;
 
+--------------------------BIR NESNEYE TIKLANDIGINDA GALERY GELSIN VE RESIM SECELIm- (SettingsActivity de)--------------------------------------
+
+  private void UserProfileImage_Click(object sender, EventArgs e)
+        {
+            Intent galleryIntent = new Intent();
+            galleryIntent.SetAction(Intent.ActionGetContent);
+            galleryIntent.SetType("image/*");
+            StartActivityForResult(galleryIntent,GalleryPick); //1
+      
+
+        }
+
+
+VE ARDINDAN BU LIBRARYI KULLANARAK CROP VS ISLEMLERI YAPTIRDIK;
+https://github.com/ian-hamlin/Xamarin.ArthurHub.Android-Image-Cropper
+Install-Package XamarinAndroid_Image_Cropper -Version 2.7.0
+XamarinAndroid_Image_Cropper 
+
+
+    protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+
+            if (requestCode == GalleryPick && resultCode == Result.Ok && data != null)
+            {
+                var imagerUri = data.Data;
+                //CropImage.Activity()
+                //    .SetGuidelines(CropImageView.Guidelines.On)
+                //    .SetAspectRatio(1, 1)
+                //    .Start(this);
+
+                CropImage.Activity(imagerUri)
+                    .SetGuidelines(CropImageView.Guidelines.On)
+                    .SetAspectRatio(1, 1)
+                    .Start(this);
+            }
+            if (requestCode == CropImage.CropImageActivityRequestCode)
+            {
+                CropImage.ActivityResult result = CropImage.GetActivityResult(data);
+            }
+
+        }
+EXTRA OLARAK  AndroidManifest.xml e 
+<activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+	  android:theme="@style/Base.Theme.AppCompat"/>
+      ekledik.
+-----------------------------------------
+
 
 
