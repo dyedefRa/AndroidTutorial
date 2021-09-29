@@ -70,6 +70,18 @@ EXTRA OLARAK  AndroidManifest.xml e
 	  android:theme="@style/Base.Theme.AppCompat"/>
       ekledik.
 -----------------------------------------
+FIREBASESTORAGE KULLANIMI / RESIM VE DOSYA ATMAK =>
+
+1)FirebaseClient.cs de;
+        public static FirebaseStorageReference GetFirebaseStorageReferenceWithChildName(string childName)
+        {
+            FirebaseStorage firebaseStorage = new FirebaseStorage("whatsapp-81d75.appspot.com");
+            return firebaseStorage.Child(childName); //Profile Images     
+        }
+2)SettingActivityde ;
+         userProfileImageRef = FirebaseClient.GetFirebaseStorageReferenceWithChildName("Profile Images");
+
+
 
 
 

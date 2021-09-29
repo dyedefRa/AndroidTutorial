@@ -1561,6 +1561,33 @@ com.google.firebase.database.annotations.NotNull;com.google.firebase.database.an
 Firebase.Database.Annotations.INullable, Xamarin.Firebase.Database;com.google.firebase.database.annotations.Nullable
 Firebase.Database.Annotations.INullable;com.google.firebase.database.annotations.Nullable
 com.google.firebase.database.annotations.Nullable;com.google.firebase.database.annotations.Nullable
+Firebase.Storage.StreamDownloadTask+IStreamProcessor, Xamarin.Firebase.Storage;com.google.firebase.storage.StreamDownloadTask$StreamProcessor
+Firebase.Storage.StreamDownloadTask.IStreamProcessor;com.google.firebase.storage.StreamDownloadTask$StreamProcessor
+com.google.firebase.storage.StreamDownloadTask$StreamProcessor;com.google.firebase.storage.StreamDownloadTask$StreamProcessor
+Firebase.Storage.StorageException+IErrorCode, Xamarin.Firebase.Storage;com.google.firebase.storage.StorageException$ErrorCode
+Firebase.Storage.StorageException.IErrorCode;com.google.firebase.storage.StorageException$ErrorCode
+com.google.firebase.storage.StorageException$ErrorCode;com.google.firebase.storage.StorageException$ErrorCode
+Firebase.Storage.IOnPausedListener, Xamarin.Firebase.Storage;com.google.firebase.storage.OnPausedListener
+Firebase.Storage.IOnPausedListener;com.google.firebase.storage.OnPausedListener
+com.google.firebase.storage.OnPausedListener;com.google.firebase.storage.OnPausedListener
+Firebase.Storage.IOnPausedListenerImplementor, Xamarin.Firebase.Storage;mono.com.google.firebase.storage.OnPausedListenerImplementor
+Firebase.Storage.IOnPausedListenerImplementor;mono.com.google.firebase.storage.OnPausedListenerImplementor
+mono.com.google.firebase.storage.OnPausedListenerImplementor;mono.com.google.firebase.storage.OnPausedListenerImplementor
+Firebase.Storage.IOnProgressListener, Xamarin.Firebase.Storage;com.google.firebase.storage.OnProgressListener
+Firebase.Storage.IOnProgressListener;com.google.firebase.storage.OnProgressListener
+com.google.firebase.storage.OnProgressListener;com.google.firebase.storage.OnProgressListener
+Firebase.Storage.IOnProgressListenerImplementor, Xamarin.Firebase.Storage;mono.com.google.firebase.storage.OnProgressListenerImplementor
+Firebase.Storage.IOnProgressListenerImplementor;mono.com.google.firebase.storage.OnProgressListenerImplementor
+mono.com.google.firebase.storage.OnProgressListenerImplementor;mono.com.google.firebase.storage.OnProgressListenerImplementor
+Firebase.Storage.StorageTask+IProvideError, Xamarin.Firebase.Storage;com.google.firebase.storage.StorageTask$ProvideError
+Firebase.Storage.StorageTask.IProvideError;com.google.firebase.storage.StorageTask$ProvideError
+com.google.firebase.storage.StorageTask$ProvideError;com.google.firebase.storage.StorageTask$ProvideError
+Firebase.Storage.Network.Connection.IHttpURLConnectionFactory, Xamarin.Firebase.Storage;com.google.firebase.storage.network.connection.HttpURLConnectionFactory
+Firebase.Storage.Network.Connection.IHttpURLConnectionFactory;com.google.firebase.storage.network.connection.HttpURLConnectionFactory
+com.google.firebase.storage.network.connection.HttpURLConnectionFactory;com.google.firebase.storage.network.connection.HttpURLConnectionFactory
+Firebase.Storage.Internal.ISleeper, Xamarin.Firebase.Storage;com.google.firebase.storage.internal.Sleeper
+Firebase.Storage.Internal.ISleeper;com.google.firebase.storage.internal.Sleeper
+com.google.firebase.storage.internal.Sleeper;com.google.firebase.storage.internal.Sleeper
 Google.Android.Material.Transition.IVisibilityAnimatorProvider, Xamarin.Google.Android.Material;com.google.android.material.transition.VisibilityAnimatorProvider
 Google.Android.Material.Transition.IVisibilityAnimatorProvider;com.google.android.material.transition.VisibilityAnimatorProvider
 com.google.android.material.transition.VisibilityAnimatorProvider;com.google.android.material.transition.VisibilityAnimatorProvider

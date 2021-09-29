@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "u8f5l88QotMnJTsxOlrP2mKsrY+nBJRLz3fo5CEf1s5mPnaFbZrc7An4rvMApYIlbvMQQ4nqgocRM2MG4jy4Cg==",
+  "dgSpecHash": "ODq8e5P3/84fe5f4r0ROpdYAHTGHSk9On6KBe2Zh6UIVr4OTbU8S9qLaEtcZudnX3y0TCbmBl02i4P/KrTOg9w==",
   "success": true,
   "projectFilePath": "D:\\ANDROIDAPPS\\WhatsApp\\WhatsApp\\WhatsApp.csproj",
   "expectedPackageFiles": [
@@ -76,6 +76,7 @@
     "C:\\Users\\msi-nb\\.nuget\\packages\\xamarin.firebase.components\\117.0.0\\xamarin.firebase.components.117.0.0.nupkg.sha512",
     "C:\\Users\\msi-nb\\.nuget\\packages\\xamarin.firebase.database\\119.7.0\\xamarin.firebase.database.119.7.0.nupkg.sha512",
     "C:\\Users\\msi-nb\\.nuget\\packages\\xamarin.firebase.database.collection\\117.0.1\\xamarin.firebase.database.collection.117.0.1.nupkg.sha512",
+    "C:\\Users\\msi-nb\\.nuget\\packages\\xamarin.firebase.storage\\119.2.1\\xamarin.firebase.storage.119.2.1.nupkg.sha512",
     "C:\\Users\\msi-nb\\.nuget\\packages\\xamarin.google.android.material\\1.4.0.2\\xamarin.google.android.material.1.4.0.2.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512",
     "C:\\Users\\msi-nb\\.nuget\\packages\\xamarin.googleplayservices.auth.api.phone\\117.5.1\\xamarin.googleplayservices.auth.api.phone.117.5.1.nupkg.sha512",

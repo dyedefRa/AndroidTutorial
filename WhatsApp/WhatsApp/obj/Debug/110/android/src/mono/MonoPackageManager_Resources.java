@@ -72,6 +72,7 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Firebase.Components.dll",
 		"Xamarin.Firebase.Database.Collection.dll",
 		"Xamarin.Firebase.Database.dll",
+		"Xamarin.Firebase.Storage.dll",
 		"Xamarin.Google.Android.Material.dll",
 		"Xamarin.Google.Guava.ListenableFuture.dll",
 		"Xamarin.GooglePlayServices.Auth.Api.Phone.dll",

@@ -125,6 +125,9 @@
     <PackageReference Include="Xamarin.Firebase.Database">
       <Version>119.7.0</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.Storage">
+      <Version>119.2.1</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Google.Android.Material" Version="1.4.0.2" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="XamarinAndroid_Image_Cropper">

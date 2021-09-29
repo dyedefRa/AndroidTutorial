@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Gms.Tasks;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -7,9 +8,12 @@ using Android.Widget;
 using Com.Theartofdev.Edmodo.Cropper;
 using DE.Hdodenhof.Circleimageview;
 using Firebase.Database;
+using Firebase.Storage;
+//using Firebase.Storage;
 using Java.Util;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using WhatsApp.Helper;
@@ -17,13 +21,16 @@ using WhatsApp.Helper;
 namespace WhatsApp.Activities
 {
     [Activity(Label = "SettingsActivity")]
-    public class SettingsActivity : Activity, IValueEventListener
+    public class SettingsActivity : Activity, IValueEventListener,IOnCompleteListener
     {
         private Button updateAccountSettings;
         private EditText userName, userStatus;
         private CircleImageView userProfileImage;
 
         private const int GalleryPick = 1;
+
+        StorageReference userProfileImageRef;
+
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -32,15 +39,14 @@ namespace WhatsApp.Activities
             SetContentView(Resource.Layout.settings_activity);
 
             InitializeFields();
+
+            userProfileImageRef = FirebaseClient.GetFirebaseStorageReferenceWithChildName("Profile Images");
+
             userName.Visibility = ViewStates.Invisible;
             updateAccountSettings.Click += UpdateAccountSettings_Click;
-
             RetrieveUserInformation();
-
             userProfileImage.Click += UserProfileImage_Click;
         }
-
-
 
         private void InitializeFields()
         {
@@ -115,10 +121,6 @@ namespace WhatsApp.Activities
             if (requestCode == GalleryPick && resultCode == Result.Ok && data != null)
             {
                 var imagerUri = data.Data;
-                //CropImage.Activity()
-                //    .SetGuidelines(CropImageView.Guidelines.On)
-                //    .SetAspectRatio(1, 1)
-                //    .Start(this);
 
                 CropImage.Activity(imagerUri)
                     .SetGuidelines(CropImageView.Guidelines.On)
@@ -128,8 +130,27 @@ namespace WhatsApp.Activities
             if (requestCode == CropImage.CropImageActivityRequestCode)
             {
                 CropImage.ActivityResult result = CropImage.GetActivityResult(data);
-            }
 
+                //Burdan sonra kırpılan resim işlemleri. Firebase e kaydedelim.
+                if (resultCode==Result.Ok)
+                {
+                    var resultUri = result.Uri;
+                    var currentUserId = FirebaseClient.GetCurrentUser().Uid;
+
+                    StorageReference filePath = userProfileImageRef.Child(currentUserId + ".jpg");
+                    filePath.PutFile(resultUri).AddOnCompleteListener(this); // => OnComplete                
+                }
+            }
+        }
+
+        public void OnComplete(Task task)
+        {
+            if (task.IsSuccessful)           
+                Toast.MakeText(this, "Profile Image uploaded successfully...", ToastLength.Short)
+                    .Show();           
+            else           
+                Toast.MakeText(this, "ERROR !!!", ToastLength.Short)
+              .Show();            
         }
 
         private void SendUserToMainActivity()
@@ -142,7 +163,6 @@ namespace WhatsApp.Activities
 
         private void RetrieveUserInformation()
         {
-
             var currentUserId = FirebaseClient.GetCurrentUser().Uid;
             FirebaseClient.GetDatabaseReference()
                 .Child(FirebaseClient.UsersChildStaticName)
@@ -167,7 +187,6 @@ namespace WhatsApp.Activities
 
                 userName.Text = retrieveUserName;
                 userStatus.Text = retrievesStatus;
-
             }
             else if (snapshot.Exists() && snapshot.HasChild(FirebaseClient.UserStaticName))
             {
@@ -197,6 +216,6 @@ namespace WhatsApp.Activities
             throw new NotImplementedException();
         }
 
-
+   
     }
 }

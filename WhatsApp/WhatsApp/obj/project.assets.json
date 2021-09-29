@@ -1619,6 +1619,30 @@
           "build/MonoAndroid90/Xamarin.Firebase.Database.Collection.targets": {}
         }
       },
+      "Xamarin.Firebase.Storage/119.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0.1",
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.Auth.Interop": "119.0.1",
+          "Xamarin.Firebase.Common": "119.5.0",
+          "Xamarin.Firebase.Components": "116.1.0",
+          "Xamarin.GooglePlayServices.Base": "117.5.0",
+          "Xamarin.GooglePlayServices.Tasks": "117.2.0"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.Firebase.Storage.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.Firebase.Storage.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid90/Xamarin.Firebase.Storage.targets": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.4.0.2": {
         "type": "package",
         "dependencies": {
@@ -3325,6 +3349,21 @@
         "xamarin.firebase.database.collection.nuspec"
       ]
     },
+    "Xamarin.Firebase.Storage/119.2.1": {
+      "sha512": "R9kB6e88EW3AEh1pWGB3nWxjLLcivEyT5hN52dC0HO39X4CAfHEg/UC5xSmglAvDiY16G8wDeZcqiMFxmbaQRw==",
+      "type": "package",
+      "path": "xamarin.firebase.storage/119.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoAndroid90/Xamarin.Firebase.Storage.targets",
+        "lib/monoandroid90/Xamarin.Firebase.Storage.dll",
+        "lib/monoandroid90/Xamarin.Firebase.Storage.pdb",
+        "proguard/MonoAndroid90/proguard.txt",
+        "xamarin.firebase.storage.119.2.1.nupkg.sha512",
+        "xamarin.firebase.storage.nuspec"
+      ]
+    },
     "Xamarin.Google.Android.Material/1.4.0.2": {
       "sha512": "2dH8pSYjlVmZk8E64E6/hZzsoTcubsH1DHLMYpnsXnteqVuFU42uG5pIuJZIOcLxgKX/QjLdMzth6/w+Oje8sQ==",
       "type": "package",
@@ -3462,6 +3501,7 @@
       "Xamarin.Essentials >= 1.7.0",
       "Xamarin.Firebase.Auth >= 121.0.1.1",
       "Xamarin.Firebase.Database >= 119.7.0",
+      "Xamarin.Firebase.Storage >= 119.2.1",
       "Xamarin.Google.Android.Material >= 1.4.0.2",
       "XamarinAndroid_Image_Cropper >= 2.7.0",
       "de.hdodenhof.circleimageview >= 3.1.0"
@@ -3532,6 +3572,10 @@
           "Xamarin.Firebase.Database": {
             "target": "Package",
             "version": "[119.7.0, )"
+          },
+          "Xamarin.Firebase.Storage": {
+            "target": "Package",
+            "version": "[119.2.1, )"
           },
           "Xamarin.Google.Android.Material": {
             "target": "Package",

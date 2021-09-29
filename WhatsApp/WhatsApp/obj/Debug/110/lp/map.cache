@@ -54,6 +54,7 @@ Xamarin.Firebase.Common.dll
 Xamarin.Firebase.Components.dll
 Xamarin.Firebase.Database.Collection.dll
 Xamarin.Firebase.Database.dll
+Xamarin.Firebase.Storage.dll
 Xamarin.Google.Android.Material.dll
 Xamarin.Google.Guava.ListenableFuture.dll
 Xamarin.GooglePlayServices.Auth.Api.Phone.dll
@@ -107,9 +108,10 @@ playservicestasks-17.2.1.aar
 playservicesbase-17.6.0.aar
 playservicessafetynet-17.0.0.aar
 playservicesauthapiphone-17.5.1.aar
-firebasedatabasecollection-17.0.1.aar
 firebasecomponents-17.0.0.aar
 firebasecommon-20.0.0.aar
 firebaseauthinterop-20.0.0.aar
+firebasestorage-19.2.1.aar
+firebasedatabasecollection-17.0.1.aar
 firebasedatabase-19.7.0.aar
 firebaseauth-21.0.1.aar

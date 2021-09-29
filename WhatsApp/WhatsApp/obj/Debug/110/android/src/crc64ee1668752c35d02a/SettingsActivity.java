@@ -5,7 +5,8 @@ public class SettingsActivity
 	extends android.app.Activity
 	implements
 		mono.android.IGCUserPeer,
-		com.google.firebase.database.ValueEventListener
+		com.google.firebase.database.ValueEventListener,
+		com.google.android.gms.tasks.OnCompleteListener
 {
 /** @hide */
 	public static final String __md_methods;
@@ -15,6 +16,7 @@ public class SettingsActivity
 			"n_onActivityResult:(IILandroid/content/Intent;)V:GetOnActivityResult_IILandroid_content_Intent_Handler\n" +
 			"n_onCancelled:(Lcom/google/firebase/database/DatabaseError;)V:GetOnCancelled_Lcom_google_firebase_database_DatabaseError_Handler:Firebase.Database.IValueEventListenerInvoker, Xamarin.Firebase.Database\n" +
 			"n_onDataChange:(Lcom/google/firebase/database/DataSnapshot;)V:GetOnDataChange_Lcom_google_firebase_database_DataSnapshot_Handler:Firebase.Database.IValueEventListenerInvoker, Xamarin.Firebase.Database\n" +
+			"n_onComplete:(Lcom/google/android/gms/tasks/Task;)V:GetOnComplete_Lcom_google_android_gms_tasks_Task_Handler:Android.Gms.Tasks.IOnCompleteListenerInvoker, Xamarin.GooglePlayServices.Tasks\n" +
 			"";
 		mono.android.Runtime.register ("WhatsApp.Activities.SettingsActivity, WhatsApp", SettingsActivity.class, __md_methods);
 	}
@@ -58,6 +60,14 @@ public class SettingsActivity
 	}
 
 	private native void n_onDataChange (com.google.firebase.database.DataSnapshot p0);
+
+
+	public void onComplete (com.google.android.gms.tasks.Task p0)
+	{
+		n_onComplete (p0);
+	}
+
+	private native void n_onComplete (com.google.android.gms.tasks.Task p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

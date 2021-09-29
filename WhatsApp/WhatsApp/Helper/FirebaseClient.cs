@@ -7,6 +7,7 @@ using Android.Widget;
 using Firebase;
 using Firebase.Auth;
 using Firebase.Database;
+using Firebase.Storage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +29,7 @@ namespace WhatsApp.Helper
         //Create User Login Logout methodları. Auth methodları yanı
         public static FirebaseAuth GetFirebaseAuth()
         {
-            return FirebaseAuth.GetInstance(FirebaseClient.GetFirebaseApp());
+            return FirebaseAuth.GetInstance(GetFirebaseApp());
         }
 
         //Bunu realtimedb de yer açmak yada kayıt almak için eklıyoruz
@@ -40,9 +41,9 @@ namespace WhatsApp.Helper
 
         public static FirebaseUser GetCurrentUser()
         {
-            return GetFirebaseAuth().CurrentUser;                
+            return GetFirebaseAuth().CurrentUser;
         }
-   
+
         private static FirebaseApp GetFirebaseApp()
         {
             var app = FirebaseApp.InitializeApp(Application.Context);
@@ -84,5 +85,14 @@ namespace WhatsApp.Helper
         //    Toast.MakeText(Application.Context, "Completed", ToastLength.Short).Show();
         //}
 
+
+        ////////////////////////////////
+        /// 
+        //DOSYA IMAGE ICIN STORAGE KULLANILIYOR
+
+        public static StorageReference GetFirebaseStorageReferenceWithChildName(string childName)
+        {
+            return FirebaseStorage.Instance.Reference.Child(childName);
+        }
     }
 }
