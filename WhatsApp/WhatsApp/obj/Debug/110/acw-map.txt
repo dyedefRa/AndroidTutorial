@@ -34,6 +34,48 @@ whatsapp.activities.RegisterActivity;crc64ee1668752c35d02a.RegisterActivity
 WhatsApp.Activities.SettingsActivity, WhatsApp;crc64ee1668752c35d02a.SettingsActivity
 WhatsApp.Activities.SettingsActivity;crc64ee1668752c35d02a.SettingsActivity
 whatsapp.activities.SettingsActivity;crc64ee1668752c35d02a.SettingsActivity
+Square.OkHttp3.CallExtensions+ActionCallback, Square.OkHttp3;crc64e9db98a0d7058662.CallExtensions_ActionCallback
+Square.OkHttp3.CallExtensions.ActionCallback;crc64e9db98a0d7058662.CallExtensions_ActionCallback
+square.okhttp3.CallExtensions_ActionCallback;crc64e9db98a0d7058662.CallExtensions_ActionCallback
+Square.OkHttp3.OkHttpClient+Builder+AuthenticatorImpl, Square.OkHttp3;okhttp3.OkHttpClient$Builder_AuthenticatorImpl
+Square.OkHttp3.OkHttpClient.Builder.AuthenticatorImpl;okhttp3.OkHttpClient$Builder_AuthenticatorImpl
+okhttp3.OkHttpClient$Builder_AuthenticatorImpl;okhttp3.OkHttpClient$Builder_AuthenticatorImpl
+Square.OkHttp3.OkHttpClient+Builder+InterceptorImpl, Square.OkHttp3;okhttp3.OkHttpClient$Builder_InterceptorImpl
+Square.OkHttp3.OkHttpClient.Builder.InterceptorImpl;okhttp3.OkHttpClient$Builder_InterceptorImpl
+okhttp3.OkHttpClient$Builder_InterceptorImpl;okhttp3.OkHttpClient$Builder_InterceptorImpl
+Square.OkHttp3.OkHttpClient+Builder+DnsImpl, Square.OkHttp3;okhttp3.OkHttpClient$Builder_DnsImpl
+Square.OkHttp3.OkHttpClient.Builder.DnsImpl;okhttp3.OkHttpClient$Builder_DnsImpl
+okhttp3.OkHttpClient$Builder_DnsImpl;okhttp3.OkHttpClient$Builder_DnsImpl
+Square.OkHttp3.OkHttpClient+Builder+HostnameVerifierImpl, Square.OkHttp3;okhttp3.OkHttpClient$Builder_HostnameVerifierImpl
+Square.OkHttp3.OkHttpClient.Builder.HostnameVerifierImpl;okhttp3.OkHttpClient$Builder_HostnameVerifierImpl
+okhttp3.OkHttpClient$Builder_HostnameVerifierImpl;okhttp3.OkHttpClient$Builder_HostnameVerifierImpl
+Square.Picasso.Picasso+IListener, Square.Picasso;com.squareup.picasso.Picasso$Listener
+Square.Picasso.Picasso.IListener;com.squareup.picasso.Picasso$Listener
+com.squareup.picasso.Picasso$Listener;com.squareup.picasso.Picasso$Listener
+Square.Picasso.Picasso+IListenerImplementor, Square.Picasso;mono.com.squareup.picasso.Picasso_ListenerImplementor
+Square.Picasso.Picasso.IListenerImplementor;mono.com.squareup.picasso.Picasso_ListenerImplementor
+mono.com.squareup.picasso.Picasso_ListenerImplementor;mono.com.squareup.picasso.Picasso_ListenerImplementor
+Square.Picasso.Picasso+IRequestTransformer, Square.Picasso;com.squareup.picasso.Picasso$RequestTransformer
+Square.Picasso.Picasso.IRequestTransformer;com.squareup.picasso.Picasso$RequestTransformer
+com.squareup.picasso.Picasso$RequestTransformer;com.squareup.picasso.Picasso$RequestTransformer
+Square.Picasso.RequestCreator+ActionCallback, Square.Picasso;com.squareup.picasso.RequestCreator_ActionCallback
+Square.Picasso.RequestCreator.ActionCallback;com.squareup.picasso.RequestCreator_ActionCallback
+com.squareup.picasso.RequestCreator_ActionCallback;com.squareup.picasso.RequestCreator_ActionCallback
+Square.Picasso.ICache, Square.Picasso;com.squareup.picasso.Cache
+Square.Picasso.ICache;com.squareup.picasso.Cache
+com.squareup.picasso.Cache;com.squareup.picasso.Cache
+Square.Picasso.ICallback, Square.Picasso;com.squareup.picasso.Callback
+Square.Picasso.ICallback;com.squareup.picasso.Callback
+com.squareup.picasso.Callback;com.squareup.picasso.Callback
+Square.Picasso.IDownloader, Square.Picasso;com.squareup.picasso.Downloader
+Square.Picasso.IDownloader;com.squareup.picasso.Downloader
+com.squareup.picasso.Downloader;com.squareup.picasso.Downloader
+Square.Picasso.ITarget, Square.Picasso;com.squareup.picasso.Target
+Square.Picasso.ITarget;com.squareup.picasso.Target
+com.squareup.picasso.Target;com.squareup.picasso.Target
+Square.Picasso.ITransformation, Square.Picasso;com.squareup.picasso.Transformation
+Square.Picasso.ITransformation;com.squareup.picasso.Transformation
+com.squareup.picasso.Transformation;com.squareup.picasso.Transformation
 AndroidX.Activity.IOnBackPressedDispatcherOwner, Xamarin.AndroidX.Activity;androidx.activity.OnBackPressedDispatcherOwner
 AndroidX.Activity.IOnBackPressedDispatcherOwner;androidx.activity.OnBackPressedDispatcherOwner
 androidx.activity.OnBackPressedDispatcherOwner;androidx.activity.OnBackPressedDispatcherOwner

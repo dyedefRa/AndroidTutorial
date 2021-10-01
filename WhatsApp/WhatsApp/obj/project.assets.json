@@ -14,6 +14,51 @@
           "lib/MonoAndroid90/de.hdodenhof.circleimageview.dll": {}
         }
       },
+      "Square.OkHttp3/3.11.0": {
+        "type": "package",
+        "dependencies": {
+          "Square.OkIO": "1.15.0"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid44/Square.OkHttp3.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid44/Square.OkHttp3.dll": {}
+        }
+      },
+      "Square.OkIO/1.15.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid44/Square.OkIO.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid44/Square.OkIO.dll": {}
+        }
+      },
+      "Square.Picasso/2.71828.0": {
+        "type": "package",
+        "dependencies": {
+          "Square.OkHttp3": "3.11.0",
+          "Xamarin.Android.Support.Annotations": "28.0.0.3",
+          "Xamarin.Android.Support.Exif": "28.0.0.3"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop",
+          "Mono.Android"
+        ],
+        "compile": {
+          "lib/monoandroid90/Square.Picasso.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Square.Picasso.dll": {}
+        }
+      },
       "System.Json/4.5.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -97,16 +142,19 @@
           "build/MonoAndroid80/Xamarin.Android.Support.Animated.Vector.Drawable.targets": {}
         }
       },
-      "Xamarin.Android.Support.Annotations/26.1.0.1": {
+      "Xamarin.Android.Support.Annotations/28.0.0.3": {
         "type": "package",
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
         "compile": {
-          "lib/MonoAndroid80/Xamarin.Android.Support.Annotations.dll": {}
+          "lib/monoandroid90/Xamarin.Android.Support.Annotations.dll": {}
         },
         "runtime": {
-          "lib/MonoAndroid80/Xamarin.Android.Support.Annotations.dll": {}
+          "lib/monoandroid90/Xamarin.Android.Support.Annotations.dll": {}
         },
         "build": {
-          "build/MonoAndroid80/Xamarin.Android.Support.Annotations.targets": {}
+          "build/monoandroid90/Xamarin.Android.Support.Annotations.targets": {}
         }
       },
       "Xamarin.Android.Support.Compat/26.1.0.1": {
@@ -155,19 +203,22 @@
           "build/MonoAndroid80/Xamarin.Android.Support.Core.Utils.targets": {}
         }
       },
-      "Xamarin.Android.Support.Exif/26.1.0.1": {
+      "Xamarin.Android.Support.Exif/28.0.0.3": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Android.Support.Annotations": "[26.1.0.1]"
+          "Xamarin.Android.Support.Annotations": "[28.0.0.3]"
         },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
         "compile": {
-          "lib/MonoAndroid80/Xamarin.Android.Support.Exif.dll": {}
+          "lib/monoandroid90/Xamarin.Android.Support.Exif.dll": {}
         },
         "runtime": {
-          "lib/MonoAndroid80/Xamarin.Android.Support.Exif.dll": {}
+          "lib/monoandroid90/Xamarin.Android.Support.Exif.dll": {}
         },
         "build": {
-          "build/MonoAndroid80/Xamarin.Android.Support.Exif.targets": {}
+          "build/monoandroid90/Xamarin.Android.Support.Exif.targets": {}
         }
       },
       "Xamarin.Android.Support.Fragment/26.1.0.1": {
@@ -1847,6 +1898,43 @@
         "lib/MonoAndroid90/de.hdodenhof.circleimageview.dll"
       ]
     },
+    "Square.OkHttp3/3.11.0": {
+      "sha512": "chd63F8Hh14XQIphPMdd9ZV29kQatPO2MpemyTb+qVGJTtqyPnAqHscSWJCEkmwKv9MzyuUMMbntuAbmKX7cqw==",
+      "type": "package",
+      "path": "square.okhttp3/3.11.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid44/Square.OkHttp3.dll",
+        "square.okhttp3.3.11.0.nupkg.sha512",
+        "square.okhttp3.nuspec"
+      ]
+    },
+    "Square.OkIO/1.15.0": {
+      "sha512": "xZLYVsUgr9L7ou8orZvM7GxB8nuqGazlnorXvzgXzcVq76LRPgcegBqwPauSdTCqHYZ3/UpAX1mXtSXoWjZUXA==",
+      "type": "package",
+      "path": "square.okio/1.15.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid44/Square.OkIO.dll",
+        "square.okio.1.15.0.nupkg.sha512",
+        "square.okio.nuspec"
+      ]
+    },
+    "Square.Picasso/2.71828.0": {
+      "sha512": "Wwpvqc7KICD5twuvNeshyI6S5DzzgMLgqELu9JZL3t9eZnEBlO9Rs5imRBGT8Sd6XB6emYFKyxIcri96SytTwA==",
+      "type": "package",
+      "path": "square.picasso/2.71828.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/monoandroid90/Square.Picasso.dll",
+        "square.picasso.2.71828.0.nupkg.sha512",
+        "square.picasso.nuspec"
+      ]
+    },
     "System.Json/4.5.0": {
       "sha512": "qa/n31qUQ1qEACgCCHVU20BEvkGQtIlOANSjn9TjmRnxDl/KSYrRzTS83iOuCSr/37BfueFSXHobhZhNUksqVQ==",
       "type": "package",
@@ -1981,17 +2069,24 @@
         "xamarin.android.support.animated.vector.drawable.nuspec"
       ]
     },
-    "Xamarin.Android.Support.Annotations/26.1.0.1": {
-      "sha512": "clVB/uAV+YuEuifeEwYUit95Ubm5JsXxKnXh6osjTqu4fu1RW2lhL5xMGoA2ebpSy30ksJJ0SeN6QF//PQ3QEg==",
+    "Xamarin.Android.Support.Annotations/28.0.0.3": {
+      "sha512": "lpKctgvxOhFTTXt7BXC6slMfG7ZqmjBe6hAl1V8A9famPA7f5B6ZuDy3cs5w4CERuP7+ufC+WjeV45Hg3CDPpA==",
       "type": "package",
-      "path": "xamarin.android.support.annotations/26.1.0.1",
+      "path": "xamarin.android.support.annotations/28.0.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "THIRD-PARTY-NOTICES.txt",
-        "build/MonoAndroid80/Xamarin.Android.Support.Annotations.targets",
-        "lib/MonoAndroid80/Xamarin.Android.Support.Annotations.dll",
-        "xamarin.android.support.annotations.26.1.0.1.nupkg.sha512",
+        "build/monoandroid80/Xamarin.Android.Support.Annotations.targets",
+        "build/monoandroid81/Xamarin.Android.Support.Annotations.targets",
+        "build/monoandroid90/Xamarin.Android.Support.Annotations.targets",
+        "build/monoandroid90/Xamarin.Android.Support.BuildTasks.dll",
+        "lib/monoandroid60/_._",
+        "lib/monoandroid70/_._",
+        "lib/monoandroid71/Xamarin.Android.Support.Annotations.dll",
+        "lib/monoandroid80/Xamarin.Android.Support.Annotations.dll",
+        "lib/monoandroid81/Xamarin.Android.Support.Annotations.dll",
+        "lib/monoandroid90/Xamarin.Android.Support.Annotations.dll",
+        "xamarin.android.support.annotations.28.0.0.3.nupkg.sha512",
         "xamarin.android.support.annotations.nuspec"
       ]
     },
@@ -2038,17 +2133,24 @@
         "xamarin.android.support.core.utils.nuspec"
       ]
     },
-    "Xamarin.Android.Support.Exif/26.1.0.1": {
-      "sha512": "cK/uialqdybTSrfQwzk92G8uX1LTJPqvX85KR6YuJDj2ArzjJqHzRqXAj7fBc8TyTSp2/It6w63nZlogJvp3Xg==",
+    "Xamarin.Android.Support.Exif/28.0.0.3": {
+      "sha512": "ksT2LmVktpJnDp6R0OGtKmhAP6Z+8ntpTigt8wVIok8S3m4osxh3AQP1ZkV488AthgQmNyEBc+qU1OH3Qjmjeg==",
       "type": "package",
-      "path": "xamarin.android.support.exif/26.1.0.1",
+      "path": "xamarin.android.support.exif/28.0.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "THIRD-PARTY-NOTICES.txt",
-        "build/MonoAndroid80/Xamarin.Android.Support.Exif.targets",
-        "lib/MonoAndroid80/Xamarin.Android.Support.Exif.dll",
-        "xamarin.android.support.exif.26.1.0.1.nupkg.sha512",
+        "build/monoandroid71/Xamarin.Android.Support.Exif.targets",
+        "build/monoandroid80/Xamarin.Android.Support.Exif.targets",
+        "build/monoandroid81/Xamarin.Android.Support.Exif.targets",
+        "build/monoandroid90/Xamarin.Android.Support.Exif.targets",
+        "lib/monoandroid60/_._",
+        "lib/monoandroid70/_._",
+        "lib/monoandroid71/Xamarin.Android.Support.Exif.dll",
+        "lib/monoandroid80/Xamarin.Android.Support.Exif.dll",
+        "lib/monoandroid81/Xamarin.Android.Support.Exif.dll",
+        "lib/monoandroid90/Xamarin.Android.Support.Exif.dll",
+        "xamarin.android.support.exif.28.0.0.3.nupkg.sha512",
         "xamarin.android.support.exif.nuspec"
       ]
     },
@@ -3494,6 +3596,7 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v11.0": [
+      "Square.Picasso >= 2.71828.0",
       "Xamarin.AndroidX.AppCompat >= 1.3.1.1",
       "Xamarin.AndroidX.ExifInterface >= 1.3.1",
       "Xamarin.AndroidX.Legacy.Support.Core.UI >= 1.0.0.5",
@@ -3545,6 +3648,10 @@
     "frameworks": {
       "monoandroid11.0": {
         "dependencies": {
+          "Square.Picasso": {
+            "target": "Package",
+            "version": "[2.71828.0, )"
+          },
           "Xamarin.AndroidX.AppCompat": {
             "target": "Package",
             "version": "[1.3.1.1, )"
@@ -3592,5 +3699,17 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: Xamarin.Android.Support.Compat 26.1.0.1 requires Xamarin.Android.Support.Annotations (= 26.1.0.1) but version Xamarin.Android.Support.Annotations 28.0.0.3 was resolved.",
+      "libraryId": "Xamarin.Android.Support.Annotations",
+      "targetGraphs": [
+        "MonoAndroid,Version=v11.0"
+      ]
+    }
+  ]
 }

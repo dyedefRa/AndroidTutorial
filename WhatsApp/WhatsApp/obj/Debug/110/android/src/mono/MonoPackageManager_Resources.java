@@ -4,6 +4,9 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "WhatsApp.dll" comes first in this list. */
 		"WhatsApp.dll",
 		"de.hdodenhof.circleimageview.dll",
+		"Square.OkHttp3.dll",
+		"Square.OkIO.dll",
+		"Square.Picasso.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Runtime.dll",

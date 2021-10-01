@@ -1,21 +1,24 @@
 {
   "version": 2,
-  "dgSpecHash": "ODq8e5P3/84fe5f4r0ROpdYAHTGHSk9On6KBe2Zh6UIVr4OTbU8S9qLaEtcZudnX3y0TCbmBl02i4P/KrTOg9w==",
+  "dgSpecHash": "1upd9Lu9nCZvFOfeGAPE9lLlM0HFiKPCOFytlwwwz3d+CrC8BhW16SkxdKQZGrwAc0SAGyVGh3JyUW6G8GEXSQ==",
   "success": true,
   "projectFilePath": "D:\\ANDROIDAPPS\\WhatsApp\\WhatsApp\\WhatsApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\msi-nb\\.nuget\\packages\\de.hdodenhof.circleimageview\\3.1.0\\de.hdodenhof.circleimageview.3.1.0.nupkg.sha512",
+    "C:\\Users\\msi-nb\\.nuget\\packages\\square.okhttp3\\3.11.0\\square.okhttp3.3.11.0.nupkg.sha512",
+    "C:\\Users\\msi-nb\\.nuget\\packages\\square.okio\\1.15.0\\square.okio.1.15.0.nupkg.sha512",
+    "C:\\Users\\msi-nb\\.nuget\\packages\\square.picasso\\2.71828.0\\square.picasso.2.71828.0.nupkg.sha512",
     "C:\\Users\\msi-nb\\.nuget\\packages\\system.json\\4.5.0\\system.json.4.5.0.nupkg.sha512",
     "C:\\Users\\msi-nb\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.0.0\\xamarin.android.arch.core.common.1.0.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.lifecycle.common\\1.0.1\\xamarin.android.arch.lifecycle.common.1.0.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.lifecycle.runtime\\1.0.0\\xamarin.android.arch.lifecycle.runtime.1.0.0.nupkg.sha512",
     "C:\\Users\\msi-nb\\.nuget\\packages\\xamarin.android.support.animated.vector.drawable\\26.1.0.1\\xamarin.android.support.animated.vector.drawable.26.1.0.1.nupkg.sha512",
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.annotations\\26.1.0.1\\xamarin.android.support.annotations.26.1.0.1.nupkg.sha512",
+    "C:\\Users\\msi-nb\\.nuget\\packages\\xamarin.android.support.annotations\\28.0.0.3\\xamarin.android.support.annotations.28.0.0.3.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.compat\\26.1.0.1\\xamarin.android.support.compat.26.1.0.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.core.ui\\26.1.0.1\\xamarin.android.support.core.ui.26.1.0.1.nupkg.sha512",
     "C:\\Users\\msi-nb\\.nuget\\packages\\xamarin.android.support.core.utils\\26.1.0.1\\xamarin.android.support.core.utils.26.1.0.1.nupkg.sha512",
-    "C:\\Users\\msi-nb\\.nuget\\packages\\xamarin.android.support.exif\\26.1.0.1\\xamarin.android.support.exif.26.1.0.1.nupkg.sha512",
+    "C:\\Users\\msi-nb\\.nuget\\packages\\xamarin.android.support.exif\\28.0.0.3\\xamarin.android.support.exif.28.0.0.3.nupkg.sha512",
     "C:\\Users\\msi-nb\\.nuget\\packages\\xamarin.android.support.fragment\\26.1.0.1\\xamarin.android.support.fragment.26.1.0.1.nupkg.sha512",
     "C:\\Users\\msi-nb\\.nuget\\packages\\xamarin.android.support.media.compat\\26.1.0.1\\xamarin.android.support.media.compat.26.1.0.1.nupkg.sha512",
     "C:\\Users\\msi-nb\\.nuget\\packages\\xamarin.android.support.v7.appcompat\\26.1.0.1\\xamarin.android.support.v7.appcompat.26.1.0.1.nupkg.sha512",
@@ -86,5 +89,16 @@
     "C:\\Users\\msi-nb\\.nuget\\packages\\xamarin.googleplayservices.tasks\\117.2.1\\xamarin.googleplayservices.tasks.117.2.1.nupkg.sha512",
     "C:\\Users\\msi-nb\\.nuget\\packages\\xamarinandroid_image_cropper\\2.7.0\\xamarinandroid_image_cropper.2.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: Xamarin.Android.Support.Compat 26.1.0.1 requires Xamarin.Android.Support.Annotations (= 26.1.0.1) but version Xamarin.Android.Support.Annotations 28.0.0.3 was resolved.",
+      "libraryId": "Xamarin.Android.Support.Annotations",
+      "targetGraphs": [
+        "MonoAndroid,Version=v11.0"
+      ]
+    }
+  ]
 }

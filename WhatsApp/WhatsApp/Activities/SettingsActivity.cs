@@ -9,8 +9,8 @@ using Com.Theartofdev.Edmodo.Cropper;
 using DE.Hdodenhof.Circleimageview;
 using Firebase.Database;
 using Firebase.Storage;
-//using Firebase.Storage;
 using Java.Util;
+using Square.Picasso;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -215,6 +215,16 @@ namespace WhatsApp.Activities
 
                 userName.Text = retrieveUserName;
                 userStatus.Text = retrievesStatus;
+
+                //BURADA SORUN VAR !!
+                var ss =  Android.Net.Uri.Parse(retrieveProfileImage);
+                userProfileImage.SetImageURI(ss);
+
+                //Picasso.Get().Load(retrieveProfileImage).Into(userProfileImage);
+                //Picasso.Load(retrieveProfileImage).Into(userProfileImage);
+                //Picasso.With(this).Load(retrieveProfileImage).Into(userProfileImage);
+
+
             }
             else if (snapshot.Exists() && snapshot.HasChild(FirebaseClient.UserStaticName))
             {
