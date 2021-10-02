@@ -1,6 +1,7 @@
 adaptive-icon;obj\Debug\110\res\mipmap-anydpi-v26\ic_launcher.xml
 adaptive-icon;obj\Debug\110\res\mipmap-anydpi-v26\ic_launcher_round.xml
 androidx.appcompat.widget.Toolbar;obj\Debug\110\res\layout\app_bar_layout.xml
+androidx.recyclerview.widget.RecyclerView;obj\Debug\110\res\layout\find_friends_activity.xml
 androidx.viewpager.widget.ViewPager;obj\Debug\110\res\layout\activity_main.xml
 attr;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\0\jl\res\values\values.xml
 attr;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\50\jl\res\values\values.xml
@@ -35,10 +36,12 @@ ImageView;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\50\jl\res\layout\cro
 ImageView;obj\Debug\110\res\layout\login_activity.xml
 ImageView;obj\Debug\110\res\layout\register_activity.xml
 include;obj\Debug\110\res\layout\activity_main.xml
+include;obj\Debug\110\res\layout\find_friends_activity.xml
 include;obj\Debug\110\res\layout\group_chat_activity.xml
 item;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\50\jl\res\menu\crop_image_menu.xml
 item;obj\Debug\110\res\drawable\options_menu.xml
 item;obj\Debug\110\res\values\styles.xml
+LinearLayout;obj\Debug\110\res\layout\find_friends_activity.xml
 LinearLayout;obj\Debug\110\res\layout\group_chat_activity.xml
 ListView;obj\Debug\110\res\layout\fragment_group.xml
 menu;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\50\jl\res\menu\crop_image_menu.xml
@@ -47,6 +50,7 @@ merge;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\50\jl\res\layout\crop_im
 paths;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 ProgressBar;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\50\jl\res\layout\crop_image_view.xml
 RelativeLayout;obj\Debug\110\res\layout\activity_main.xml
+RelativeLayout;obj\Debug\110\res\layout\find_friends_activity.xml
 RelativeLayout;obj\Debug\110\res\layout\fragment_chat.xml
 RelativeLayout;obj\Debug\110\res\layout\fragment_contact.xml
 RelativeLayout;obj\Debug\110\res\layout\fragment_group.xml

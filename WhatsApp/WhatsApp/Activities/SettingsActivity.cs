@@ -216,6 +216,7 @@ namespace WhatsApp.Activities
                 userName.Text = retrieveUserName;
                 userStatus.Text = retrievesStatus;
 
+                //https://www.youtube.com/watch?v=zV9PSBnCkJc&list=PLxefhmF0pcPmtdoud8f64EpgapkclCllj&index=28&ab_channel=CodingCafe
                 //BURADA SORUN VAR !!
                 var ss =  Android.Net.Uri.Parse(retrieveProfileImage);
                 userProfileImage.SetImageURI(ss);

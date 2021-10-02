@@ -61,6 +61,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\FindFriendsActivity.cs" />
     <Compile Include="Activities\GroupChatActivity.cs" />
     <Compile Include="Activities\LoginActivity.cs" />
     <Compile Include="Activities\PhoneLoginActivity.cs" />
@@ -213,6 +214,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\phone_login_activity.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\find_friends_activity.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

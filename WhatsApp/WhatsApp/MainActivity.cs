@@ -114,23 +114,23 @@ namespace WhatsApp
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            if (item.ItemId == Resource.Id.main_logout_option)//4
+            if (item.ItemId == Resource.Id.main_find_friends_option)//1
             {
-                FirebaseClient.GetFirebaseAuth().SignOut();
-                SendUserToLoginActivity();
-            }
-            else if (item.ItemId == Resource.Id.main_settings_option)//3
-            {
-                SendUserToSettingsActivity();
-            }
-            else if (item.ItemId == Resource.Id.main_find_friends_option)//1
-            {
-
+                SendUserToFindFriendsActivity();
             }
             else if (item.ItemId == Resource.Id.main_create_group_option)//2
             {
                 //Burada dialog cıkardık.
                 RequestNewGroup();
+            }
+            else if (item.ItemId == Resource.Id.main_settings_option)//3
+            {
+                SendUserToSettingsActivity();
+            }
+            else if (item.ItemId == Resource.Id.main_logout_option)//4
+            {
+                FirebaseClient.GetFirebaseAuth().SignOut();
+                SendUserToLoginActivity();
             }
             return true;
         }
@@ -141,6 +141,12 @@ namespace WhatsApp
             settingsIntent.AddFlags(ActivityFlags.NewTask | ActivityFlags.ClearTask);
             StartActivity(settingsIntent);
             Finish();
+        }
+
+        private void SendUserToFindFriendsActivity()
+        {
+            Intent findFriendsIntent = new Intent(this, typeof(FindFriendsActivity));    
+            StartActivity(findFriendsIntent);
         }
 
         EditText groupNameField;

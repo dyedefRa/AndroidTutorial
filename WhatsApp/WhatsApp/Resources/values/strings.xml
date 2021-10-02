@@ -4,4 +4,5 @@
 	<string name="firebaseApiKey">AIzaSyDW2iP83_mGuJ1hFgOitXv1bONjCxvUoFE</string>
 	<string name="hintEx">e.g Antiexe</string>
 	<string name="groupName">Group Name</string>
+	<string name="findFriends">Find Friends</string>
 </resources>
