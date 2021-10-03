@@ -56,7 +56,7 @@ namespace WhatsApp
         }
 
         //Main activity başlamadan once eger current user yoksa logine at.
-        //Varsa VerifyUserExistance() a bak. ;;
+        //Varsa VerifyUserExistance() a bak. 
         //Eger name prop null degılse Welcome yaz degılse Setting sayfasına yonlendır.
         protected override void OnStart()
         {
