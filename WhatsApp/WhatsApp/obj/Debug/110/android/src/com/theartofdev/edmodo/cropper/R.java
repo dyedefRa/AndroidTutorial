@@ -596,20 +596,20 @@ public final class R {
 		public static final int crop_image_menu_flip = 0x7f070073;
 		public static final int crop_image_menu_rotate_left = 0x7f070074;
 		public static final int crop_image_menu_rotate_right = 0x7f070075;
-		public static final int notification_action_background = 0x7f07009d;
-		public static final int notification_bg = 0x7f07009e;
-		public static final int notification_bg_low = 0x7f07009f;
-		public static final int notification_bg_low_normal = 0x7f0700a0;
-		public static final int notification_bg_low_pressed = 0x7f0700a1;
-		public static final int notification_bg_normal = 0x7f0700a2;
-		public static final int notification_bg_normal_pressed = 0x7f0700a3;
-		public static final int notification_icon_background = 0x7f0700a4;
-		public static final int notification_template_icon_bg = 0x7f0700a5;
-		public static final int notification_template_icon_low_bg = 0x7f0700a6;
-		public static final int notification_tile_bg = 0x7f0700a7;
-		public static final int notify_panel_notification_icon_bg = 0x7f0700a8;
-		public static final int tooltip_frame_dark = 0x7f0700b0;
-		public static final int tooltip_frame_light = 0x7f0700b1;
+		public static final int notification_action_background = 0x7f07009e;
+		public static final int notification_bg = 0x7f07009f;
+		public static final int notification_bg_low = 0x7f0700a0;
+		public static final int notification_bg_low_normal = 0x7f0700a1;
+		public static final int notification_bg_low_pressed = 0x7f0700a2;
+		public static final int notification_bg_normal = 0x7f0700a3;
+		public static final int notification_bg_normal_pressed = 0x7f0700a4;
+		public static final int notification_icon_background = 0x7f0700a5;
+		public static final int notification_template_icon_bg = 0x7f0700a6;
+		public static final int notification_template_icon_low_bg = 0x7f0700a7;
+		public static final int notification_tile_bg = 0x7f0700a8;
+		public static final int notify_panel_notification_icon_bg = 0x7f0700a9;
+		public static final int tooltip_frame_dark = 0x7f0700b1;
+		public static final int tooltip_frame_light = 0x7f0700b2;
 	}
 	public static final class id {
 		public static final int CropOverlayView = 0x7f080004;
@@ -731,7 +731,7 @@ public final class R {
 		public static final int topPanel = 0x7f0801f6;
 		public static final int uniform = 0x7f080201;
 		public static final int up = 0x7f080203;
-		public static final int wrap_content = 0x7f080215;
+		public static final int wrap_content = 0x7f080219;
 	}
 	public static final class integer {
 		public static final int abc_config_activityDefaultDur = 0x7f090000;

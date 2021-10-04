@@ -19,6 +19,7 @@ com.google.android.material.tabs.TabLayout;obj\Debug\110\res\layout\activity_mai
 com.theartofdev.edmodo.cropper.CropImageView;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\50\jl\res\layout\crop_image_activity.xml
 com.theartofdev.edmodo.cropper.CropOverlayView;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\50\jl\res\layout\crop_image_view.xml
 de.hdodenhof.circleimageview.CircleImageView;obj\Debug\110\res\layout\settings_activity.xml
+de.hdodenhof.circleimageview.CircleImageView;obj\Debug\110\res\layout\users_display_layout.xml
 declare-styleable;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\0\jl\res\values\values.xml
 declare-styleable;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\50\jl\res\values\values.xml
 EditText;obj\Debug\110\res\layout\group_chat_activity.xml
@@ -35,6 +36,7 @@ ImageButton;obj\Debug\110\res\layout\group_chat_activity.xml
 ImageView;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\50\jl\res\layout\crop_image_view.xml
 ImageView;obj\Debug\110\res\layout\login_activity.xml
 ImageView;obj\Debug\110\res\layout\register_activity.xml
+ImageView;obj\Debug\110\res\layout\users_display_layout.xml
 include;obj\Debug\110\res\layout\activity_main.xml
 include;obj\Debug\110\res\layout\find_friends_activity.xml
 include;obj\Debug\110\res\layout\group_chat_activity.xml
@@ -43,6 +45,7 @@ item;obj\Debug\110\res\drawable\options_menu.xml
 item;obj\Debug\110\res\values\styles.xml
 LinearLayout;obj\Debug\110\res\layout\find_friends_activity.xml
 LinearLayout;obj\Debug\110\res\layout\group_chat_activity.xml
+LinearLayout;obj\Debug\110\res\layout\users_display_layout.xml
 ListView;obj\Debug\110\res\layout\fragment_group.xml
 menu;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\50\jl\res\menu\crop_image_menu.xml
 menu;obj\Debug\110\res\drawable\options_menu.xml
@@ -59,6 +62,7 @@ RelativeLayout;obj\Debug\110\res\layout\login_activity.xml
 RelativeLayout;obj\Debug\110\res\layout\phone_login_activity.xml
 RelativeLayout;obj\Debug\110\res\layout\register_activity.xml
 RelativeLayout;obj\Debug\110\res\layout\settings_activity.xml
+RelativeLayout;obj\Debug\110\res\layout\users_display_layout.xml
 resources;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\0\jl\res\values\values.xml
 resources;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\50\jl\res\values\values.xml
 resources;D:\ANDROIDAPPS\WhatsApp\WhatsApp\obj\Debug\110\lp\50\jl\res\values-ar\values-ar.xml
@@ -115,3 +119,4 @@ TextView;obj\Debug\110\res\layout\fragment_contact.xml
 TextView;obj\Debug\110\res\layout\group_chat_activity.xml
 TextView;obj\Debug\110\res\layout\login_activity.xml
 TextView;obj\Debug\110\res\layout\register_activity.xml
+TextView;obj\Debug\110\res\layout\users_display_layout.xml

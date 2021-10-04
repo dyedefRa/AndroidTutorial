@@ -63,18 +63,18 @@ public final class R {
 		public static final int notification_top_pad_large_text = 0x7f060194;
 	}
 	public static final class drawable {
-		public static final int notification_action_background = 0x7f07009d;
-		public static final int notification_bg = 0x7f07009e;
-		public static final int notification_bg_low = 0x7f07009f;
-		public static final int notification_bg_low_normal = 0x7f0700a0;
-		public static final int notification_bg_low_pressed = 0x7f0700a1;
-		public static final int notification_bg_normal = 0x7f0700a2;
-		public static final int notification_bg_normal_pressed = 0x7f0700a3;
-		public static final int notification_icon_background = 0x7f0700a4;
-		public static final int notification_template_icon_bg = 0x7f0700a5;
-		public static final int notification_template_icon_low_bg = 0x7f0700a6;
-		public static final int notification_tile_bg = 0x7f0700a7;
-		public static final int notify_panel_notification_icon_bg = 0x7f0700a8;
+		public static final int notification_action_background = 0x7f07009e;
+		public static final int notification_bg = 0x7f07009f;
+		public static final int notification_bg_low = 0x7f0700a0;
+		public static final int notification_bg_low_normal = 0x7f0700a1;
+		public static final int notification_bg_low_pressed = 0x7f0700a2;
+		public static final int notification_bg_normal = 0x7f0700a3;
+		public static final int notification_bg_normal_pressed = 0x7f0700a4;
+		public static final int notification_icon_background = 0x7f0700a5;
+		public static final int notification_template_icon_bg = 0x7f0700a6;
+		public static final int notification_template_icon_low_bg = 0x7f0700a7;
+		public static final int notification_tile_bg = 0x7f0700a8;
+		public static final int notify_panel_notification_icon_bg = 0x7f0700a9;
 	}
 	public static final class id {
 		public static final int accessibility_action_clickable_span = 0x7f080012;
@@ -146,10 +146,10 @@ public final class R {
 		public static final int text2 = 0x7f0801e1;
 		public static final int time = 0x7f0801f0;
 		public static final int title = 0x7f0801f1;
-		public static final int view_tree_lifecycle_owner = 0x7f08020b;
-		public static final int view_tree_saved_state_registry_owner = 0x7f08020c;
-		public static final int view_tree_view_model_store_owner = 0x7f08020d;
-		public static final int visible_removing_fragment_view_tag = 0x7f08020f;
+		public static final int view_tree_lifecycle_owner = 0x7f08020f;
+		public static final int view_tree_saved_state_registry_owner = 0x7f080210;
+		public static final int view_tree_view_model_store_owner = 0x7f080211;
+		public static final int visible_removing_fragment_view_tag = 0x7f080213;
 	}
 	public static final class integer {
 		public static final int status_bar_notification_info_maxnum = 0x7f09001c;

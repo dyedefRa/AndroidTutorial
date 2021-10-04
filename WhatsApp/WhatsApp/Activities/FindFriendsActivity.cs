@@ -34,5 +34,12 @@ namespace WhatsApp.Activities
             SupportActionBar.SetDisplayShowHomeEnabled(true);
             SupportActionBar.SetTitle(Resource.String.findFriends);
         }
+
+        protected override void OnStart()
+        {
+            base.OnStart();
+
+            //FirebaseRecyclerAdapter
+        }
     }
 }
