@@ -25,6 +25,7 @@ namespace WhatsApp.Activities
 
             SetContentView(Resource.Layout.find_friends_activity);
             findFriendsRecyclerList = FindViewById<RecyclerView>(Resource.Id.find_friends_recycler_list);
+
             findFriendsRecyclerList.SetLayoutManager(new LinearLayoutManager(this));
 
             mToolBar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.find_friends_toolbar);
